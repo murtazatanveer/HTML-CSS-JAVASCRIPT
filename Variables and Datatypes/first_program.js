@@ -182,3 +182,41 @@
 
 //}
 
+// let x = 10+9-13+17*2;
+
+// console.log(x);
+
+// console.log('9' - '5'); // -> 4
+//  console.log('19' - '13' + '17'); // -> '617'
+//  console.log('9' - '13' + 17); // -> 23
+//  console.log('123' < 57); // -> false
+//  console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143
+
+// if(isNaN("5" * "m") == true) {
+//     console.log("equal");
+// }
+
+// else{
+//     console.log("Not Equal");
+// }
+
+// console.log(typeof(isNaN("5" * "m")));
+
+// const x=10;
+
+// if(typeof(x)== "number"){
+//     console.log("hello");
+// }
+
+//  // Using prompt to get input from the user
+//  let userInput = prompt("Enter something:");
+
+//  // Displaying the user input
+//  console.log("User input:", userInput);
+
+//   // Using prompt to get input from the user
+//   let Input = prompt("Enter : ");
+
+//   // Displaying the user input
+//   console.log("User enters : ",Input);
+
