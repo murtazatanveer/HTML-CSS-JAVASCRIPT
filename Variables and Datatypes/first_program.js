@@ -220,3 +220,144 @@
 //   // Displaying the user input
 //   console.log("User enters : ",Input);
 
+// let x=10;
+//  console.log(x);
+// x="murtaza";
+// console.log(x);
+
+
+// let num = prompt("Enter Number : ");
+
+// if(num%2==0){
+
+//     alert("even number");
+//     console.log(num,"is even");
+
+// }
+
+// else{
+//     alert("Odd Number");
+//     console.log(num,"is odd");
+// }
+
+// {
+
+//     // Function to find Fctorial of a number
+
+// //prompt("Enter Number yo want find Fictorial : ");
+
+// let input = 5;
+
+//  console.log("Fictorial of",input,"is",fictorial(input));
+
+// //alert("Fictorial of " + input  + " is " + fictorial(input));
+
+// function fictorial(num){
+
+//     let fact=1;
+//     let i;
+
+//     for(i=1;i<=num;i++){
+
+// fact = fact*i;
+
+//     }
+
+//     return fact;
+    
+// }
+
+
+// }
+
+// {
+
+// // funtion to find LCM of two numbers.
+
+// let a=5,b=11;
+
+// console.log("LCM of",a,"and",b,"is",lcm(5,11));
+
+// function lcm(x,y){
+
+//  let gre = 0;
+
+// if(x>y){gre = x;}
+
+// else{gre=y;}
+
+// let LCM = 0;
+
+// while(1){
+
+//     if((gre % x == 0) && (gre % y == 0)){
+
+// LCM = gre;
+// break;
+
+//     }
+// gre++;
+
+// }
+
+// return LCM;
+
+// }
+
+// }
+
+
+// let student = {
+
+//     name : "murtaza",
+//     age : 21,
+//     is_student : false
+
+// };
+
+// console.log(student);
+
+// student = 10;
+
+// console.log(student);
+
+// let a = prompt("Enter num : ");
+
+// if(a==10){alert("hello");}
+
+//{ let a = "boolean" === (typeof(true)) ? "fine" : "not fine";
+
+// console.log(a); }
+
+// {
+
+// let a=5;
+
+// let b=++a;
+
+// console.log(b);
+// console.log(a);
+
+// }
+
+// {
+// let ass="fine";
+
+//  ass = ass + 1; // same as : ass++;
+
+// console.log(ass);
+// }
+
+
+// {
+//     let a = 5**2;
+
+//     console.log(a);
+// }
+
+{
+    let a = (true) === 1;
+    console.log(a)
+    // console.log(!true==false);
+}
+
