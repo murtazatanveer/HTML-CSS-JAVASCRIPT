@@ -240,7 +240,7 @@
 //     console.log(num,"is odd");
 // }
 
-// {
+ {
 
 //     // Function to find Fctorial of a number
 
@@ -252,59 +252,59 @@
 
 // //alert("Fictorial of " + input  + " is " + fictorial(input));
 
-// function fictorial(num){
+function fictorial(num){
 
-//     let fact=1;
-//     let i;
+    let fact=1;
+    let i;
 
-//     for(i=1;i<=num;i++){
+    for(i=1;i<=num;i++){
 
-// fact = fact*i;
+fact = fact*i;
 
-//     }
+    }
 
-//     return fact;
+    return fact;
     
-// }
+}
 
 
-// }
+}
 
-// {
+{
 
-// // funtion to find LCM of two numbers.
+// funtion to find LCM of two numbers.
 
-// let a=5,b=11;
+//let a=5,b=11;
 
-// console.log("LCM of",a,"and",b,"is",lcm(5,11));
+//console.log("LCM of",a,"and",b,"is",lcm(5,11));
 
-// function lcm(x,y){
+function lcm(x,y){
 
-//  let gre = 0;
+ let gre = 0;
 
-// if(x>y){gre = x;}
+if(x>y){gre = x;}
 
-// else{gre=y;}
+else{gre=y;}
 
-// let LCM = 0;
+let LCM = 0;
 
-// while(1){
+while(1){
 
-//     if((gre % x == 0) && (gre % y == 0)){
+    if((gre % x == 0) && (gre % y == 0)){
 
-// LCM = gre;
-// break;
+LCM = gre;
+break;
 
-//     }
-// gre++;
+    }
+gre++;
 
-// }
+}
 
-// return LCM;
+return LCM;
 
-// }
+}
 
-// }
+}
 
 
 // let student = {
@@ -358,6 +358,6 @@
 {
     let a = (true) === 1;
     console.log(a)
-    // console.log(!true==false);
+    console.log(!true===false);
 }
 
