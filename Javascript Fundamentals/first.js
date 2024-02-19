@@ -1,12 +1,12 @@
 
 
-// Number guessing game
+// Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
 
 //number_guess();
 
 function number_guess(){
 
-let num = Math.floor(Math.random() * 100) + 1;
+let num = Math.floor(Math.random() * 500) + 1;
 
 let guess = 0;
 
@@ -60,4 +60,49 @@ return tip;
 
 bill = 30;
 
-console.log("The bill was",bill,",the tip was",tip_calculator(bill),", and the total value",total);
+//console.log("The bill was",bill,",the tip was",tip_calculator(bill),", and the total value",total);
+
+
+{ //Template Strings
+
+
+const birth_year = 2003;
+
+let current_year = 2024;
+
+const name = "Murtaza Tanveer"
+
+const job = "Software Engineer";
+
+    let me = `Hi I am ${name}, a ${current_year - birth_year} years old ${job}.`;
+
+    console.log(me);
+    
+}
+
+// Type Conversion
+
+{
+
+let num_1 = 10;
+
+let num_2 = "20";
+
+let concatinate = num_1 + num_2;
+
+let sum = num_1 +  Number(num_2);
+
+console.log(`Concatinate : ${concatinate}\nSum : ${sum}`);
+
+let n1 = 10;
+
+let n2 = 5;
+
+console.log(n1 + String(n2));
+
+let x = 5 + "5" - 55;
+
+console.log(x,typeof(x));
+
+}
+
