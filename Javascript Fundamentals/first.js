@@ -106,3 +106,39 @@ console.log(x,typeof(x));
 
 }
 
+// Truthy and Falsy Values
+
+{
+    // 5 Falsy values are 0 , undefined , null , "" (empty string) and NaN
+
+    console.log(Boolean(0));
+    console.log(Boolean(undefined));
+    console.log(Boolean(NaN));
+    console.log(Boolean(null));
+    console.log(Boolean(""));
+
+}
+
+ 
+
+
+// Function to find Reverse of a number.
+
+console.log(`Reverse of 1234 is ${Reverse(1234)}.`);
+
+function Reverse(num)
+{
+    let digit = 0;
+    let rev = 0;
+
+    while(num!=0){
+
+        digit = num % 10;
+        rev = (rev * 10) + digit;
+        num = Math.floor(num/10);
+    
+    }
+
+return rev;
+
+}
