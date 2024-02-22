@@ -142,3 +142,66 @@ function Reverse(num)
 return rev;
 
 }
+
+
+
+//Function that returns the nth Fab number.
+
+ function fab(n) {
+
+
+    let f0 = 0,f1 = 1,current_f = 0;
+
+    for(let i = 2;i<=n;i++){
+
+        current_f = f0 + f1;
+
+        f0=f1;
+
+        f1=current_f;
+        
+
+    }
+    
+    return current_f;
+
+};
+
+
+// Ternary Operator ?
+{
+
+    let age = 21;
+    let vote = age>=18 ? "You have right to vote" : "You donot have right to vote";
+    console.log(vote);
+
+}
+
+
+
+// For in loop
+
+{
+
+
+   
+    const person = {
+
+        name: 'xyz',
+        age: 21,
+        city: 'lahore',
+        Hobby: "Programmer"
+
+      };
+      
+
+
+      for(let key in person){
+
+        console.log(`${key} : ${person[key]}`);
+        
+      }
+
+
+    
+}
