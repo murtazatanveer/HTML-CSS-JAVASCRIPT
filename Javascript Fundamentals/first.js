@@ -2,9 +2,9 @@
 
 // // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
 
-// //number_guess();
+ //number_guess();
 
-// function number_guess(){
+ function number_guess(){
 
 // let num = Math.floor(Math.random() * 500) + 1;
 
@@ -38,169 +38,171 @@
 //  }
 
     
-// }
+ }
 
 
-// /* Steven wants to build a very simple tip calculator for whenever he goes eating in a 
-// restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 
-// 300. If the value is different, the tip is 20% */
+ /* Steven wants to build a very simple tip calculator for whenever he goes eating in a 
+ restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 
+ 300. If the value is different, the tip is 20% */
 
 
-// let total = 0;
+let total = 0;
 
-// function tip_calculator(bill){
+function tip_calculator(bill){
 
-// let tip = bill >=50 && bill <=300 ? (15*bill)/100 : (20*bill)/100;
+let tip = bill >=50 && bill <=300 ? (15*bill)/100 : (20*bill)/100;
 
-// total = tip + bill;
+total = tip + bill;
 
-// return tip;
+return tip;
 
-// }
+}
 
-// bill = 30;
+bill = 30;
 
-// //console.log("The bill was",bill,",the tip was",tip_calculator(bill),", and the total value",total);
-
-
-// { //Template Strings
+//console.log("The bill was",bill,",the tip was",tip_calculator(bill),", and the total value",total);
 
 
-// const birth_year = 2003;
+{ //Template Strings
 
-// let current_year = 2024;
 
-// const name = "Murtaza Tanveer"
+const birth_year = 2003;
 
-// const job = "Software Engineer";
+let current_year = 2024;
 
-//     let me = `Hi I am ${name}, a ${current_year - birth_year} years old ${job}.`;
+const name = "Murtaza Tanveer"
 
-//     console.log(me);
+const job = "Software Engineer";
+
+    let me = `Hi I am ${name}, a ${current_year - birth_year} years old ${job}.`;
+
+    console.log(me);
     
-// }
+}
 
-// // Type Conversion
+ // Type Conversion
 
-// {
+{
 
-// let num_1 = 10;
+let num_1 = 10;
 
-// let num_2 = "20";
+let num_2 = "20";
 
-// let concatinate = num_1 + num_2;
+let concatinate = num_1 + num_2;
 
-// let sum = num_1 +  Number(num_2);
+let sum = num_1 +  Number(num_2);
 
-// console.log(`Concatinate : ${concatinate}\nSum : ${sum}`);
+console.log(`Concatinate : ${concatinate}\nSum : ${sum}`);
 
-// let n1 = 10;
+let n1 = 10;
 
-// let n2 = 5;
+let n2 = 5;
 
-// console.log(n1 + String(n2));
+console.log(n1 + String(n2));
 
-// let x = 5 + "5" - 55;
+let x = 5 + "5" - 55;
 
-// console.log(x,typeof(x));
+console.log(x,typeof(x));
 
-// }
+}
 
-// // Truthy and Falsy Values
+ // Truthy and Falsy Values
 
-// {
-//     // 5 Falsy values are 0 , undefined , null , "" (empty string) and NaN
+{
+    // 5 Falsy values are 0 , undefined , null , "" (empty string) and NaN
 
-//     console.log(Boolean(0));
-//     console.log(Boolean(undefined));
-//     console.log(Boolean(NaN));
-//     console.log(Boolean(null));
-//     console.log(Boolean(""));
+    console.log(Boolean(0));
+    console.log(Boolean(undefined));
+    console.log(Boolean(NaN));
+    console.log(Boolean(null));
+    console.log(Boolean(""));
 
-// }
+}
 
  
 
 
-// // Function to find Reverse of a number.
+// Function to find Reverse of a number.
 
-// console.log(`Reverse of 1234 is ${Reverse(1234)}.`);
+console.log(`Reverse of 1234 is ${Reverse(1234)}.`);
 
-// function Reverse(num)
-// {
-//     let digit = 0;
-//     let rev = 0;
+function Reverse(num)
+{
+    let digit = 0;
+    let rev = 0;
 
-//     while(num!=0){
+    while(num!=0){
 
-//         digit = num % 10;
-//         rev = (rev * 10) + digit;
-//         num = Math.floor(num/10);
+        digit = num % 10;
+        rev = (rev * 10) + digit;
+        num = Math.floor(num/10);
     
-//     }
+    }
 
-// return rev;
+return rev;
 
-// }
-
-
-
-// //Function that returns the nth Fab number.
-
-//  function fab(n) {
+}
 
 
-//     let f0 = 0,f1 = 1,current_f = 0;
 
-//     for(let i = 2;i<=n;i++){
+//Function that returns the nth Fab number.
 
-//         current_f = f0 + f1;
+ function fab(n) {
 
-//         f0=f1;
 
-//         f1=current_f;
+    let f0 = 0,f1 = 1,current_f = 0;
+
+    for(let i = 2;i<=n;i++){
+
+        current_f = f0 + f1;
+
+        f0=f1;
+
+        f1=current_f;
         
 
-//     }
+    }
     
-//     return current_f;
+    return current_f;
 
-// };
-
-
-// // Ternary Operator ?
-// {
-
-//     let age = 21;
-//     let vote = age>=18 ? "You have right to vote" : "You donot have right to vote";
-//     console.log(vote);
-
-// }
+};
 
 
-
-// For in loop
-
+// Ternary Operator ?
 {
+
+    let age = 21;
+    let vote = age>=18 ? "You have right to vote" : "You donot have right to vote";
+    console.log(vote);
+
+}
+
+
+
+// // For loops
+
+ {
 
 
    
-    // const person = {
+    const person = {
 
-    //     name: 'xyz',
-    //     age: 21,
-    //     city: 'lahore',
-    //     Hobby: "Programmer"
+        name: 'xyz',
+        age: 21,
+        city: 'lahore',
+        Hobby: "Programmer"
 
-    //   };
+      };
+
       
-// let key;
+      
 
-//       for( key in person){
 
-//         console.log(`${key} : ${person[key]}`);
+      for(let key in person){
+
+        console.log(`${key} : ${person[key]}`);
         
-//       }
+      }
 
 
 
@@ -224,6 +226,8 @@
 
       };
       
+      
+
       let k;
 
       let i = 1;
@@ -257,5 +261,36 @@
         
       }
       
+
+      let numbers = [10,20,30,40];
+
+
+      for(let index in numbers){
+
+        console.log(`${index} : ${numbers[index]}`);
+
+
+      }
+
+    const university = {
+
+        name : "Comsats",
+        branch : "Abbottabad",
+        is_private : true,
+    }
+
+    const array = Object.keys(university);
+
+    for(let key of array){
+
+        console.log(key);
+    }
+
+    const arr = Object.values(university);
+
+    for(let key of arr){
+
+        console.log(key);
+    }
 
 }
