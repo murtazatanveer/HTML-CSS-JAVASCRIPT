@@ -6,36 +6,36 @@
 
  function number_guess(){
 
-// let num = Math.floor(Math.random() * 500) + 1;
+let num = Math.floor(Math.random() * 500) + 1;
 
-// let guess = 0;
+let guess = 0;
 
-// let guess_counter = 0;
+let guess_counter = 0;
 
-//     while(1){
+    while(1){
 
-// guess = prompt("Enter a Number : ");
+guess = prompt("Enter a Number : ");
 
-// guess_counter++;
+guess_counter++;
 
-// if(num==guess){
+if(num==guess){
 
-// alert("CONGRATULATIONS! You Guess correctly the original number is "+num+"\nYour total guesses are "+guess_counter);
+alert("CONGRATULATIONS! You Guess correctly the original number is "+num+"\nYour total guesses are "+guess_counter);
 
-// break;
+break;
 
-// }
+}
 
-// else{
+else{
 
-// if(guess>num){alert("Your Guess is greator than number");}
+if(guess>num){alert("Your Guess is greator than number");}
 
-// else{alert("Your Guess is Smaller than number");}
+else{alert("Your Guess is Smaller than number");}
 
-// }
+}
 
 
-//  }
+ }
 
     
  }
@@ -179,7 +179,7 @@ return rev;
 
 
 
-// // For loops
+// For loops
 
  {
 
@@ -288,9 +288,39 @@ return rev;
 
     const arr = Object.values(university);
 
-    for(let key of arr){
+   
 
-        console.log(key);
+    for(let key in arr){
+
+
+        console.log(key+" : ",arr[key]);
     }
+
+    
+
+
+}
+
+/* Write a program to print the marks of student in an object "marks" using for loop*/
+
+{
+    const marks = {
+
+        stu_1 : 90,
+        stu_2 : 80,
+        stu_3 : 75,
+        stu_4 : 50,
+    }
+
+    
+
+    for(let i=0; i<= (Object.keys(marks).length-1); i++){
+
+        console.log(`Marks of ${Object.keys(marks)[i]} is ${Object.values(marks)[i]}`);
+
+    }
+
+
+
 
 }
