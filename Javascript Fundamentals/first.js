@@ -1,8 +1,8 @@
 
 
- // // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
+//   // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
 
-//  //number_guess();
+//   number_guess();
 
 //  function number_guess(){
 
@@ -179,7 +179,7 @@
 
 
 
-// // For loops
+//  // For loops
 
 //  {
 
@@ -301,109 +301,215 @@
 
 // }
 
-/* Write a program to print the marks of student in an object "marks" using for loop*/
+// /* Write a program to print the marks of student in an object "marks" using for loop*/
 
-//{
-    // const marks = {
+// {
+//     const marks = {
 
-    //     stu_1 : 90,
-    //     stu_2 : 80,
-    //     stu_3 : 75,
-    //     stu_4 : 50,
-    // }
+//         stu_1 : 90,
+//         stu_2 : 80,
+//         stu_3 : 75,
+//         stu_4 : 50,
+//     }
 
     
 
-    // for(let i=0; i<= (Object.keys(marks).length-1); i++){
+//     for(let i=0; i<= (Object.keys(marks).length-1); i++){
 
-    //     console.log(`Marks of ${Object.keys(marks)[i]} is ${Object.values(marks)[i]}`);
+//         console.log(`Marks of ${Object.keys(marks)[i]} is ${Object.values(marks)[i]}`);
 
-    // }
+//     }
 
-    // /* Same problem using "for in" loop */
+//     /* Same problem using "for in" loop */
 
-    // for(let key in marks){
+//     for(let key in marks){
 
-    //     console.log(`Marks of ${key} is ${marks[key]}`);
-    // }
+//         console.log(`Marks of ${key} is ${marks[key]}`);
+//      }
 
 
-//}
 
-/* Function to calculate age of a person */
+// }
 
-calculate_age();
+// /* Function to calculate age of a person */
 
-function calculate_age(){
+// calculate_age();
 
-const birth_year = Number(prompt("Enter the Year in which you were born : "));
+// function calculate_age(){
 
-const birth_month = Number(prompt("Enter the Month in which you were born : "));
+// const name = prompt("Enter your name : ");
 
-const birth_date = Number(prompt("Enter the Date in which you were born : "));
+// const birth_year = Number(prompt("Enter the Year in which you were born : "));
 
-const today = new Date();
+// const birth_month = Number(prompt("Enter the Month in which you were born : "));
 
-const year = today.getFullYear();
-const month = today.getMonth() + 1; 
-const date = today.getDate();
+// const birth_date = Number(prompt("Enter the Date in which you were born : "));
 
-let age_month = 0, age_year = 0, age_Date = 0
+// const today = new Date();
 
-if(month==birth_month && date==birth_date){
+// const year = today.getFullYear();
+// const month = today.getMonth() + 1; 
+// const date = today.getDate();
 
-    age_year = year - birth_year;
+// let age_month = 0, age_year = 0, age_Date = 0
 
-}
+// if(month==birth_month && date==birth_date){
 
-else if(birth_month > month || ((birth_month==month)&&(birth_date>date))){
+//     age_year = year - birth_year;
 
-    age_year = (year - birth_year)-1;
+// }
 
-if(month<birth_month){
-    age_month = (12-birth_month) + month;
-    age_Date = (30.42-birth_date) - (30.42-date);
+// else if(birth_month > month || ((birth_month==month)&&(birth_date>date))){
 
-}
+//     age_year = (year - birth_year)-1;
 
-    else {
+// if(month<birth_month){
+//     age_month = (12-birth_month) + month;
+//     age_Date = (30.42-birth_date) - (30.42-date);
 
-        age_month = ((12-birth_month) + month) - 1;
-        age_Date = birth_date-date;
-    }   
-}
+// }
 
-else{
+//     else {
 
-    age_year = (year - birth_year);
+//         age_month = ((12-birth_month) + month) - 1;
+//         age_Date = birth_date-date;
+//     }   
+// }
 
-    if(month==birth_month){
+// else{
 
-    age_month = 0;
-    age_Date = date - birth_date;
+//     age_year = (year - birth_year);
 
-}
+//     if(month==birth_month){
 
-else{
+//     age_month = 0;
+//     age_Date = date - birth_date;
 
-    age_month =  (month-birth_month);
+// }
 
-    if(date>birth_date){
+// else{
 
-        age_Date = date - birth_date;
+//     age_month =  (month-birth_month);
+
+//     if(date>birth_date){
+
+//         age_Date = date - birth_date;
         
+//     }
+
+//     else{
+
+//         age_month--;
+//         age_Date = 30.42-(birth_date-date);
+
+//     }
+// }
+    
+// }
+
+// alert(`Hi ${name}, you are ${age_year} years , ${age_month} months and ${age_Date} days old`);
+
+// }
+
+
+// // Functions Expressions (Anonymous Functions) 
+
+// {
+    
+
+//     const add = function(num_1 , num_2){
+
+//         return num_1 + num_2;
+//     } 
+
+//     console.log(add(10,20)); //Outputs : 30 
+
+//   console.log(typeof(add)); //Outputs : function
+
+//   console.log(typeof( add(10,20) )); //Outputs : number
+
+
+// const calculator = {
+
+//     add : function(num_1,num_2){
+
+//         return num_1 + num_2;
+//     },
+
+//     sub : function(num_1,num_2){
+
+//         return num_1 - num_2;
+//     },
+
+//     mul : function(num_1,num_2){
+
+//         return num_1 * num_2;
+//     },
+
+//     div : function(num_1,num_2){
+
+//         return num_1/num_2;
+//     }
+// }
+
+// console.log(calculator.mul(5,2)); // Outputs : 10
+
+// const print_hello = function(){
+//     console.log("HELLO");
+// }
+
+// print_hello();// Outputs : HELLO
+
+// }
+
+
+// Arrow Functions
+
+{
+
+    const add = (num_1,num_2) => {
+        return num_1 + num_2;
     }
 
-    else{
+    console.log(add(10,20)); // Outputs : 30
 
-        age_month--;
-        age_Date = 30.42-(birth_date-date);
 
-    }
+    const calculator = {
+
+            add : (num_1,num_2) => {
+        
+                return num_1 + num_2;
+            },
+        
+            sub : (num_1,num_2)=>{
+        
+                return num_1 - num_2;
+            },
+        
+            mul : (num_1,num_2)=>{
+        
+                return num_1 * num_2;
+            },
+        
+            div : (num_1,num_2)=>{
+        
+                return num_1/num_2;
+            }
+        }
+
+console.log(calculator.mul(10,5)); // Outputs : 50
+
+const print_hello = () =>{console.log("Hello");}
+
+print_hello(); // Outputs : Hello
+    
+{
+    const print_hello = () =>"Hello";
+
+let x = print_hello();
+
+console.log(x); // Outputs : Hello
+
 }
     
-}
-
-alert(`You are ${age_year} years , ${age_month} months and ${age_Date} days old`);
-
 }
