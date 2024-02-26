@@ -2,7 +2,7 @@
 
   // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
 
-  number_guess();
+  //number_guess();
 
  function number_guess(){
 
@@ -194,10 +194,6 @@ return rev;
 
       };
 
-      
-      
-
-
       for(let key in person){
 
         console.log(`${key} : ${person[key]}`);
@@ -292,7 +288,6 @@ return rev;
 
     for(let key in arr){
 
-
         console.log(key+" : ",arr[key]);
     }
 
@@ -313,7 +308,6 @@ return rev;
     }
 
     
-
     for(let i=0; i<= (Object.keys(marks).length-1); i++){
 
         console.log(`Marks of ${Object.keys(marks)[i]} is ${Object.values(marks)[i]}`);
@@ -333,7 +327,7 @@ return rev;
 
 /* Function to calculate age of a person */
 
-calculate_age();
+//calculate_age();
 
 function calculate_age(){
 
@@ -584,3 +578,50 @@ checkWinner(calcAverage(44,23,71),calcAverage(65,54,49));
 // Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 
 checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
+
+
+// // Arrays
+
+{
+    const numbers = [10,20,30,40,50,(70-60),70,80,90,100];
+
+    function reverse_numbers(numbers){
+
+        let temp = 0;
+
+        for(let i = 0 ; i < (numbers.length/2); i++){
+
+            temp = numbers[numbers.length-i-1];
+
+            numbers[numbers.length-i-1] = numbers[i];
+
+            numbers[i] = temp;
+
+        }
+
+        return numbers;
+
+   }
+   
+   
+
+   const reversedNumbers = reverse_numbers([...numbers]);
+
+   console.log(numbers);
+
+   console.log(reversedNumbers);
+
+}
+
+// {
+//     let arr = new Array();
+
+
+//     for(let i=0;i<5;i++){
+
+//         arr[i] = Number(prompt(`Enter ${i+1} Number : `));
+
+//     }
+
+    
+// }
