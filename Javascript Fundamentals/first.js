@@ -580,10 +580,12 @@ checkWinner(calcAverage(44,23,71),calcAverage(65,54,49));
 checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
 
 
-// // Arrays
+// Arrays
 
-{
-    const numbers = [10,20,30,40,50,(70-60),70,80,90,100];
+ {
+
+   const numbers = [10,20,30,40,50,60,70,80,90,100,110];
+
 
     function reverse_numbers(numbers){
 
@@ -600,28 +602,57 @@ checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
         }
 
         return numbers;
-
+ 
    }
    
-   
+
 
    const reversedNumbers = reverse_numbers([...numbers]);
-
-   console.log(numbers);
 
    console.log(reversedNumbers);
 
 }
 
-// {
-//     let arr = new Array();
+{
+    let arr = new Array();
 
+    for(let i=0;i<5;i++){
 
-//     for(let i=0;i<5;i++){
+        arr[i] = Number(prompt(`Enter ${i+1} Number : `));
 
-//         arr[i] = Number(prompt(`Enter ${i+1} Number : `));
-
-//     }
+    }
 
     
-// }
+}
+
+
+// // Arrays Operations
+
+{
+    const evenNumbers = [4,6,8,10];
+
+    // Add an element at the end of an array
+
+    evenNumbers.push(12);
+    console.log(evenNumbers);
+
+    // Add an element at the start of an array
+
+    evenNumbers.unshift(2);
+    console.log(evenNumbers);
+
+    // Remove an element from the end of an array
+
+    let elementToRemove = evenNumbers.pop();
+    console.log(`Removed element from end is ${elementToRemove}`);
+    console.log(evenNumbers);
+
+    // Remove an element from the start of an array
+
+    elementToRemove = evenNumbers.shift();
+    console.log(`Removed element from start is ${elementToRemove}`);
+    console.log(evenNumbers);
+
+}
+
+  
