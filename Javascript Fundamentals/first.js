@@ -613,7 +613,7 @@ checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
 
 }
 
-{
+ /*{
     let arr = new Array();
 
     for(let i=0;i<5;i++){
@@ -623,12 +623,12 @@ checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
     }
 
     
-}
+}*/
 
 
 // // Arrays Operations
 
-{
+ {
     const evenNumbers = [4,6,8,10];
 
     // Add an element at the end of an array
@@ -653,6 +653,84 @@ checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
     console.log(`Removed element from start is ${elementToRemove}`);
     console.log(evenNumbers);
 
+    // Checking that an element is present in an array
+
+    let IsElementExist = evenNumbers.includes(8);
+
+    console.log(IsElementExist);
+
+     IsElementExist = evenNumbers.includes(12);
+
+    console.log(IsElementExist);
+
+    // Concatination of two arrays
+
+    const alphabets = ['a','b','c','d','e','f','g','h'];
+
+    const digits = [1,2,3,4,5];
+
+    const digitsAndAlphabets = digits.concat(alphabets);
+
+    console.log(digitsAndAlphabets);
+
+    // Returns a shallow copy of a portion of an array into a new array.
+
+    const fewAlphabets = alphabets.slice(2,6);
+
+    console.log(fewAlphabets);
+
+    // Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+    const x=10;
+
+    alphabets.splice(1,4,x);
+
+    console.log(alphabets);
+
 }
 
-  
+/*  Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is 
+20%.
+
+Your tasks:
+
+1. Write a function 'calcTip' that takes any bill value as an input and returns 
+the corresponding tip, calculated based on the rules above (you can check out 
+the code from first tip calculator challenge if you need to). Use the function 
+type you like the most. Test the function using a bill value of 100
+2. And now let's use arrays! So create an array 'bills' containing the test data 
+below
+3. Create an array 'tips' containing the tip value for each bill, calculated from 
+the function you created before
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+
+Test data: 125, 555 and 44 */
+
+{
+
+
+    const bill = [125,555,44,300,1000,600];
+
+    const tip = new Array();
+
+    const total = new Array();
+
+    function calcTip(bill) {
+
+        for(let i = 0; i<bill.length; i++){
+
+             tip[i] = bill[i] >=50 && bill[i] <=300 ? (15*bill[i])/100 : (20*bill[i])/100;
+
+             total[i] = tip[i] + bill[i];
+        }
+
+        
+    }
+
+    calcTip(bill);
+
+    console.log("Tip : ",tip,"\nTotal : ",total);
+
+
+}
