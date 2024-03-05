@@ -2,7 +2,7 @@
 
   // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
 
-  //number_guess();
+ // number_guess();
 
  function number_guess(){
 
@@ -28,9 +28,9 @@ break;
 
 else{
 
-if(guess>num){alert("Your Guess is greator than number");}
+if(guess>num){alert(`${guess} is greator than original number`);}
 
-else{alert("Your Guess is Smaller than number");}
+else{alert(`${guess} is smaller than original number`);}
 
 }
 
@@ -306,6 +306,9 @@ return rev;
         stu_3 : 75,
         stu_4 : 50,
     }
+const choice = "stu_2";
+
+console.log(marks[choice]);
 
     
     for(let i=0; i<= (Object.keys(marks).length-1); i++){
@@ -325,7 +328,7 @@ return rev;
 
 }
 
-/* Function to calculate age of a person */
+// /* Function to calculate age of a person */
 
 //calculate_age();
 
@@ -524,30 +527,30 @@ function addAndSquare(n1,n2){
 console.log(addAndSquare(3,5)); // Outputs : 42
 
 
-/* Coding Challenge : 
+// /* Coding Challenge : 
 
-Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new 
-gymnastics discipline, which works differently.
-Each team competes 3 times, and then the average of the 3 scores is calculated (so 
-one average score per team).
-A team only wins if it has at least double the average score of the other team. 
-Otherwise, no team wins!
+// Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new 
+// gymnastics discipline, which works differently.
+// Each team competes 3 times, and then the average of the 3 scores is calculated (so 
+// one average score per team).
+// A team only wins if it has at least double the average score of the other team. 
+// Otherwise, no team wins!
 
-Your tasks:
+// Your tasks:
 
-1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
-2. Use the function to calculate the average for both teams
-3. Create a function 'checkWinner' that takes the average score of each team 
-as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner 
-to the console, together with the victory points, according to the rule above. 
-Example: "Koalas win (30 vs. 13)"
-4. Use the 'checkWinner' function to determine the winner for both Data 1 and 
-Data 2
-5. Ignore draws this time
-Test data:
-§ Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
-§ Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
- */
+// 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+// 2. Use the function to calculate the average for both teams
+// 3. Create a function 'checkWinner' that takes the average score of each team 
+// as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner 
+// to the console, together with the victory points, according to the rule above. 
+// Example: "Koalas win (30 vs. 13)"
+// 4. Use the 'checkWinner' function to determine the winner for both Data 1 and 
+// Data 2
+// 5. Ignore draws this time
+// Test data:
+// § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+// § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+//  */
 
 
 const calcAverage = (s1,s2,s3) => (s1 + s2 + s3)/3;
@@ -571,13 +574,13 @@ console.log("No Team Wins!");
 
 }
 
-// Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+// // Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 
-checkWinner(calcAverage(44,23,71),calcAverage(65,54,49));
+// checkWinner(calcAverage(44,23,71),calcAverage(65,54,49));
 
-// Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+// // Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 
-checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
+// checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
 
 
 // Arrays
@@ -625,8 +628,16 @@ checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
     
 }*/
 
+{
+    
+const arr = [2,4,function(n1,n2){return n1 + n2},6];
 
-// // Arrays Operations
+console.log(arr[2](2,4));
+
+}
+
+
+// //Arrays Operations
 
  {
     const evenNumbers = [4,6,8,10];
@@ -707,7 +718,7 @@ the function you created before
 
 Test data: 125, 555 and 44 */
 
-{
+ {
 
 
     const bill = [125,555,44,300,1000,600];
@@ -732,5 +743,101 @@ Test data: 125, 555 and 44 */
 
     console.log("Tip : ",tip,"\nTotal : ",total);
 
+
+
+}
+
+
+// // Object Methods
+
+{
+const person = {
+
+    name : "moon",
+    birthYear : 2003,
+    Loc : "Abbottabad",
+
+    age : function() {
+        this.a = 2024 - this.birthYear;
+        return this.a; 
+},
+
+    education : {
+        institutionName : "Comsats",
+        isPass : true,
+    },
+
+   
+};
+
+
+console.log(person.age());
+console.log(person.a);
+
+
+
+/*Coding Challenge : 
+
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to 
+implement the calculations! Remember: BMI = mass / height ** 2 = mass 
+/ (height * height) (mass in kg and height in meter)
+
+Your tasks:
+1. For each of them, create an object with properties for their full name, mass, and 
+height (Mark Miller and John Smith)
+
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same 
+method on both objects). Store the BMI value to a property, and also return it 
+from the method
+
+3. Log to the console who has the higher BMI, together with the full name and the 
+respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m 
+tall. */
+
+
+const calculateBMI = function (){
+
+const mark = {
+
+    fullName : "Mark Miller",
+    mass : 78,
+    height : 1.69,
+    calcBMI : function(){
+
+        this.BMI = (this.mass)/(this.height**2);
+        return this.BMI;
+
+    }
+}
+
+const John = {
+
+    fullName : "John Smith",
+    mass : 92,
+    height : 1.95,
+    calcBMI : function(){
+
+        this.BMI = (this.mass)/(this.height**2);
+        return this.BMI;
+
+    }
+}
+
+
+if(mark.calcBMI()>John.calcBMI()){
+
+    console.log(`${mark["fullName"]} BMI (${mark.BMI}) is higher than ${John.fullName} BMI (${John.BMI})`);
+}
+else{
+    
+    console.log(`${John["fullName"]} BMI (${John.BMI}) is higher than ${mark.fullName} BMI (${mark.BMI})`);
+
+}
+
+}
+
+calculateBMI();
 
 }
