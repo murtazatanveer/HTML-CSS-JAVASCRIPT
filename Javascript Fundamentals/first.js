@@ -846,6 +846,7 @@ calculateBMI();
 
 {
     let numbers = [1,2,3,5,6,[10,20,30],7,8];
+   
 
     for(let i = 0; i<numbers.length ;i++){
        
@@ -881,3 +882,45 @@ while(dice!==5){
 
 }
 
+// // Strings in JS.
+
+{
+
+
+    let name = "abcde";
+    const reverseOfString = function(str){
+
+        let rev = "";
+
+      for(let i=str.length-1;i>=0;i--){
+
+       rev = rev + str[i];
+       
+      }
+
+      return rev;
+        
+
+    };
+
+    function stringReverse(str){
+
+      str = str.split("");
+      let temp;
+
+      for(let i=0; i<Math.floor(str.length/2); i++){
+
+            temp = str[str.length-i-1];
+            str[str.length-i-1]=str[i];
+            str[i]=temp; 
+      }
+
+      return str.join("");
+
+    }
+
+    console.log(reverseOfString(name));
+    console.log(stringReverse(name));
+
+    
+}
