@@ -1,8 +1,8 @@
 
 
-  // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
+   // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
 
- // number_guess();
+  // number_guess();
 
  function number_guess(){
 
@@ -574,13 +574,13 @@ console.log("No Team Wins!");
 
 }
 
-// // Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+// Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 
-// checkWinner(calcAverage(44,23,71),calcAverage(65,54,49));
+checkWinner(calcAverage(44,23,71),calcAverage(65,54,49));
 
-// // Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+// Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 
-// checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
+checkWinner(calcAverage(85,54,41),calcAverage(23,34,27));
 
 
 // Arrays
@@ -748,7 +748,7 @@ Test data: 125, 555 and 44 */
 }
 
 
-// // Object Methods
+// Object Methods
 
 {
 const person = {
@@ -827,17 +827,57 @@ const John = {
 
 
 if(mark.calcBMI()>John.calcBMI()){
-
     console.log(`${mark["fullName"]} BMI (${mark.BMI}) is higher than ${John.fullName} BMI (${John.BMI})`);
 }
 else{
-    
     console.log(`${John["fullName"]} BMI (${John.BMI}) is higher than ${mark.fullName} BMI (${mark.BMI})`);
 
 }
 
 }
 
+
 calculateBMI();
 
 }
+
+
+ // Loops and Arrays in JS.
+
+{
+    let numbers = [1,2,3,5,6,[10,20,30],7,8];
+
+    for(let i = 0; i<numbers.length ;i++){
+       
+        if(i==5){
+            
+            for(let j=0;j<numbers[i].length;j++){
+                console.log(numbers[i][j]);
+            }
+            i++;
+
+        }
+
+      console.log(numbers[i]);
+    }
+
+ let tableOfFive = [5,10,25,20,25,30,35,40,45,50];
+
+ for(let i=0;i<10;i++){
+
+    if(tableOfFive[i] % 10 != 0){
+        continue;
+    }
+    console.log(tableOfFive[i]);
+
+ }
+  
+let dice = Math.floor(Math.random() * 10) + 1;
+
+while(dice!==5){
+    console.log(`Rolled : ${dice}`);
+    dice = Math.floor(Math.random() * 10) + 1;
+}
+
+}
+
