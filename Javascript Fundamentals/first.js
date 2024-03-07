@@ -698,6 +698,12 @@ console.log(arr[2](2,4));
 
     console.log(alphabets);
 
+    // Reverse an array
+
+    const oddNumbers = [1,3,5,7,9];
+    const rev = oddNumbers.reverse();
+    console.log(rev);
+
 }
 
 /*  Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
@@ -873,19 +879,18 @@ calculateBMI();
 
  }
   
-let dice = Math.floor(Math.random() * 10) + 1;
+/*let dice = Math.floor(Math.random() * 10) + 1;
 
 while(dice!==5){
     console.log(`Rolled : ${dice}`);
     dice = Math.floor(Math.random() * 10) + 1;
-}
+}*/
 
 }
 
 // // Strings in JS.
 
 {
-
 
     let name = "abcde";
     const reverseOfString = function(str){
@@ -922,5 +927,52 @@ while(dice!==5){
     console.log(reverseOfString(name));
     console.log(stringReverse(name));
 
+}
+
+// // Strings Methods in JS.
+
+{
+    let str = "javascript";
+    let fun = " is fun";
+    let javascript = "";
+
+    // ASCII value of a character
+    const code = str.charCodeAt(1);
+    console.log(code); // Outputs : 97
+
+    // Concatinate two or more strings
+    javascript = str.concat(fun);
+    console.log(javascript); // Outputs : javascript is fun
+
+    //Checking that a character or string is present in String to check
+    const isStrExist = javascript.includes("fun");
+    console.log(isStrExist); // Outputs :true
+   
+    // search for the index where character or string is present
+    const Index = javascript.search("is");
+    console.log(Index); // Outputs : 11
+
+    // Replace a String from a specific string
+     const replace = javascript.replace("is fun","is amazing");
+     console.log(replace); // Outputs : javascript is amazing 
+
+    // Return the specific part of the string
+    const part = javascript.slice(4,10);
+    console.log(part); // Outputs : script
     
+    // Split the string into an array of characters
+    javascript = javascript.split("");
+    console.log(javascript);
+    
+   // Join the array or characters into single string
+   javascript = javascript.join("");
+   console.log(javascript);
+
+   // Converts the string into Uppercase;
+   javascript = javascript.toUpperCase();
+   console.log(javascript); // Outputs : JAVASCRIPT IS FUN
+
+   // Converts the string into Lowecase
+   javascript = javascript.toLowerCase();
+   console.log(javascript); // Outputs : javascript is fun 
 }
