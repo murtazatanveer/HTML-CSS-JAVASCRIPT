@@ -975,4 +975,47 @@ while(dice!==5){
    // Converts the string into Lowecase
    javascript = javascript.toLowerCase();
    console.log(javascript); // Outputs : javascript is fun 
+
+   
+
+}
+
+// Difference between Arrow Functions and Simple functions in objects
+
+{
+
+        const university = {
+        name : "Comsats",
+        address : "Abbottabad",
+        establishYear : 1985,
+
+        yearsToEstablish : function (yearPresent) {
+
+            return yearPresent - this.establishYear;
+            
+        } 
+        
+    }
+
+    console.log(university.yearsToEstablish(2024));
+}
+
+{
+
+    var estYear = 1985;
+
+    const university = {
+        name : "Comsats",
+        address : "Abbottabad",
+        
+
+        yearsToEstablish :  (yearPresent)=> {
+
+            return yearPresent - this.estYear;
+            
+        } 
+    }
+
+    console.log(university.yearsToEstablish(2024));
+
 }
