@@ -11,3 +11,5 @@ Italic : <i></i> or <em></em>
 Ordered List : <ol></ol> and <li></li>
 
 Unordered List : <ul></ul> and <li></li>
+
+Image : <img src="me.jpg" width = "500" heigth "200"/>
