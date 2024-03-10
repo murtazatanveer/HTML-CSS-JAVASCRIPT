@@ -1,0 +1,13 @@
+Elements in HTML : 
+
+Heading : <h1></h1>
+
+Paragraph : <p></p>
+
+Bold : <b></b> or <strong></strong>
+
+Italic : <i></i> or <em></em>
+
+Ordered List : <ol></ol> and <li></li>
+
+Unordered List : <ul></ul> and <li></li>
