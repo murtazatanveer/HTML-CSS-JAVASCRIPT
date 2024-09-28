@@ -1,4 +1,4 @@
-Elements in HTML : 
+1. Elements in HTML
 
 Heading : <h1></h1>
 
@@ -12,4 +12,39 @@ Ordered List : <ol></ol> and <li></li>
 
 Unordered List : <ul></ul> and <li></li>
 
+Detailed Description List : <dl>
+<dt>Title</dt>
+<dd>List</dd>
+ </dl>
+
 Image : <img src="me.jpg" width = "500" heigth "200"/>
+
+Comments : <!--This is a comment-->
+
+For Next Line : <br/> or <hr/>
+
+For Hyper Link : <a href="#">https://chatgpt.com/c/97010e04-4432-4b84-9638-4d06b7cae87a</a>
+
+For Substitution : <sub>Substitution</sub>
+
+<big>… </big> increase the size of the font
+
+<small>… </small> decrease the size of the font
+
+For Navigation : <nav>.....</nav>
+
+For Header : <header>.....</header>
+
+For article : <article>....</article>
+
+For footer : <footer>....</footer>
+
+
+
+2. Attributes :
+
+<p style = "colour : red">
+
+<bode bgcolour = "red">
+
+<h1 style = "text-align : center">
