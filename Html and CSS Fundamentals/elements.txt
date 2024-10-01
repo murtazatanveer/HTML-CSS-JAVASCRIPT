@@ -39,7 +39,13 @@ For article : <article>....</article>
 
 For footer : <footer>....</footer>
 
+For aside : <aside></aside>
 
+For Adding Button : <button></button>
+
+For internal CSS : <style></style>
+
+For linking CSS file to HTML file : <link rel="stylesheet" href="style.css">
 
 2. Attributes :
 

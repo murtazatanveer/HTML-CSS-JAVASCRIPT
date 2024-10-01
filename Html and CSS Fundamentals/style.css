@@ -1,0 +1,55 @@
+h1 {
+  color: rgb(252, 255, 255);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h2,
+h3,
+h4 {
+  color: rgb(252, 255, 255);
+  font-family: sans-serif;
+}
+
+h2 h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p {
+  color: rgb(212, 219, 218);
+  font-family: "Gill Sans";
+  line-height: 1.8;
+  font-style: italic;
+}
+
+body {
+  background: linear-gradient(to top left, rgba(0, 159, 88, 0.861), #044e4f);
+}
+
+li {
+  color: rgb(212, 219, 218);
+  font-family: "Gill Sans";
+  line-height: 1.8;
+  font-style: italic;
+}
+
+a {
+  color: yellowgreen;
+}
+
+#copy {
+  color: whitesmoke;
+  font-size: 8px;
+}
+
+.java-youtubers {
+  font-weight: bold;
+}
+
+#dots-remover {
+  list-style: none;
+}
