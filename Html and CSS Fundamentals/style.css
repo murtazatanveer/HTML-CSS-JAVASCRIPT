@@ -27,13 +27,17 @@ p {
 }
 
 body {
-  background: linear-gradient(to top left, rgba(0, 159, 88, 0.861), #044e4f);
+  background: linear-gradient(
+    to top left,
+    rgba(24, 26, 31, 0.831),
+    rgb(24, 26, 31)
+  );
 }
 
 li {
   color: rgb(212, 219, 218);
   font-family: "Gill Sans";
-  line-height: 1.8;
+  line-height: 2;
   font-style: italic;
 }
 
@@ -61,4 +65,19 @@ aside {
 
 li:first-child {
   font-weight: bold;
+}
+
+/* body article h4 {
+  color: red;
+} */
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(252, 246, 62, 0.952);
+  font-weight: bolder;
+  font-style: italic;
+  text-decoration: solid underline rgba(252, 217, 62, 0.952);
 }
