@@ -55,7 +55,7 @@ a {
 }
 
 #dots-remover {
-  list-style: disc;
+  list-style: none;
 }
 
 aside {
@@ -78,6 +78,6 @@ a:link {
 a:hover {
   color: rgba(252, 246, 62, 0.952);
   font-weight: bolder;
-  font-style: italic;
-  text-decoration: solid underline rgba(252, 217, 62, 0.952);
+  font-style: oblique;
+  text-decoration: solid rgba(252, 217, 62, 0.952);
 }

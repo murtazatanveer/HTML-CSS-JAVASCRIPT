@@ -1,0 +1,142 @@
+body {
+  background-color: #181a20;
+}
+
+#main {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 415px;
+  height: 600px;
+  border: 0.5px solid #3e4045;
+  border-radius: 26px;
+}
+
+#logo {
+  position: absolute;
+  top: 7%;
+  left: 9%;
+}
+
+#txt {
+  position: absolute;
+  top: 12%;
+  left: 9%;
+  color: white;
+  font-size: 33px;
+  font-family: Arial;
+}
+
+#Qr-Code {
+  position: absolute;
+  top: 17%;
+  left: 81%;
+  border: 0x solid black;
+  border-radius: 7px;
+}
+
+#elabel {
+  color: white;
+  font-family: Arial;
+  font-size: 15px;
+  position: absolute;
+  top: 31%;
+  left: 9%;
+}
+
+#email {
+  background-color: #181a20;
+  position: absolute;
+  top: 35%;
+  left: 9%;
+  height: 44px;
+  width: 330px;
+  border: 0.5px solid #3e4045;
+  border-radius: 10px;
+}
+
+input[type="email"]::placeholder {
+  font-size: 17px;
+  position: absolute;
+  left: 3%;
+}
+
+#next {
+  background-color: rgba(245, 216, 51, 0.961);
+
+  position: absolute;
+  top: 47%;
+  left: 9%;
+  height: 47px;
+  width: 335px;
+  border: 0px solid #3e4045;
+  border-radius: 10px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+}
+
+#or {
+  color: #bcbdc09f;
+  position: absolute;
+  top: 56%;
+  left: 48%;
+}
+
+#google {
+  background-color: #181a20;
+
+  height: 47px;
+  width: 335px;
+  border: 0.5px solid #3e4045;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Arial";
+  line-height: 2.7;
+  position: absolute;
+  top: 63.5%;
+  left: 9%;
+  color: white;
+  font-weight: bold;
+}
+
+#apple {
+  background-color: #181a20;
+  height: 47px;
+  width: 335px;
+  border: 0.5px solid #3e4045;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Arial";
+  line-height: 2.7;
+  position: absolute;
+  top: 74%;
+  left: 9%;
+  color: white;
+  font-weight: bold;
+}
+
+#glogo {
+  position: absolute;
+  top: 66%;
+  left: 13%;
+}
+
+#alogo {
+  position: absolute;
+  top: 76.5%;
+  left: 13%;
+}
+
+#line {
+  color: rgb(245, 199, 15);
+  background-color: #181a20;
+  text-align: center;
+  border: 0px;
+  font-family: "Arial";
+  font-weight: bold;
+  position: absolute;
+  top: 107%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
