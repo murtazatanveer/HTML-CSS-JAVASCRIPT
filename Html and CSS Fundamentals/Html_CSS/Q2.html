@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Personal Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: wheat;
+        color: #333;
+      }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "about projects"
+          "contact contact"
+          "footer footer";
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+      }
+
+      header {
+        grid-area: header;
+        background-color: orange;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+      header nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+      }
+
+      header nav a:hover {
+        text-decoration: underline;
+      }
+
+      .about {
+        grid-area: about;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      .about h2 {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .projects {
+        grid-area: projects;
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+
+      .project-item {
+        margin-bottom: 15px;
+      }
+
+      .contact {
+        grid-area: contact;
+        background-color: #e9e9e9;
+        padding: 20px;
+      }
+
+      .about ul li {
+        line-height: 3;
+        font-family: Arial;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          grid-template-areas:
+            "header"
+            "about"
+            "projects"
+            "contact"
+            "footer";
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Portfolio</h1>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <section class="about" id="about">
+        <h2>About Me</h2>
+        <h3>
+          Greetings! We are a fully fledged Diabetes Centre located in
+          Abbottabad serving:
+        </h3>
+        <ul>
+          <li>Routine Diabetes checkups and glyceamic control</li>
+          <li>Footcare centre alongside trained podiatrists</li>
+          <li>Footwear factory alongside trained cobblers</li>
+          <li>Newly installed equipped and accurate laboratory</li>
+          <li>Pharmacy alongside qualified pharmacists</li>
+        </ul>
+      </section>
+      <section class="projects" id="projects">
+        <div class="project-item">
+          <img src="logo.jpg" alt="logo" width="600" height="400" />
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>
+          If you'd like to contact us or have any inquiries, feel free to reach
+          out through : 03482388767
+        </p>
+      </section>
+      <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
