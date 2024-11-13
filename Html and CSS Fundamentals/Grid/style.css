@@ -1,0 +1,46 @@
+body {
+  background-color: wheat;
+}
+
+.parent {
+  display: grid;
+  border: 10px double rgb(192, 60, 60);
+  gap: 20px;
+  width: 1000px;
+  height: 500px;
+}
+
+div > div {
+  margin: 10px;
+}
+
+.div1 {
+  grid-column: span 3;
+  border: 10px solid black;
+}
+
+.div2 {
+  grid-row-start: 2;
+  border: 10px solid black;
+}
+
+.div3 {
+  grid-row-start: 2;
+  border: 10px solid black;
+}
+
+.div4 {
+  grid-row-start: 2;
+  border: 10px solid black;
+}
+
+.div5 {
+  grid-row-start: 3;
+  grid-column: span 3;
+  border: 10px solid black;
+}
+
+.div6 {
+  grid-row-start: 4;
+  border: 10px solid black;
+}

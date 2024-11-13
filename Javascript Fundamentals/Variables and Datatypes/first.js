@@ -1,14 +1,13 @@
 // /* Demo Code of Variables and Datatypes is JS */
 
-
 // console.log("WELCOME TO JAVASCRIPT");
 // console.log("MY Name is Murtaza Tanveer");
-// console.log("My First Code in JS. (24th Jan 2023)");
+// console.log("My First Code in JS. (24th Jan 2024)");
 
 // let full_name = "murtaza tanveer";
 
 // {
-  
+
 //     age=21;
 //   address = "jhelum";
 //  // a = address + age;
@@ -16,12 +15,9 @@
 // }
 // //console.log("\n",a,"\n");
 // {
-   
 
 //     console.log("My Introduction\n","Name : ",full_name , "\n","Age : ",age,"\n","Address : ",address);
 // }
-
-
 
 // let a = 10;
 // let b= 5;
@@ -36,7 +32,6 @@
 // console.log(a+b);
 
 //  }
-
 
 // let str = "murtaza ";
 // let str_2 = "tanveer";
@@ -65,7 +60,6 @@
 
 //  console.log("str - number = ",str-number);
 
-
 // let variable;
 // console.log(variable); // Outputs: undefined
 
@@ -84,9 +78,6 @@
 // console.log(uniqueKey);
 
 // name_1 = "murtaza";
-
-
-
 
 // //Objects in JS
 
@@ -123,7 +114,6 @@
 // person_2.is_student = false;
 
 // console.log(person_2);
-
 
 //  console.log(" Name : ",person.name,"\n","Age : ",person.age,"\n","Address",person.address);
 
@@ -175,7 +165,6 @@
 
 // vehicle.owner.age=21;
 
-
 // console.log(vehicle.owner.address);
 
 // console.log(vehicle);
@@ -225,7 +214,6 @@
 // x="murtaza";
 // console.log(x);
 
-
 // let num = prompt("Enter Number : ");
 
 // if(num%2==0){
@@ -240,72 +228,58 @@
 //     console.log(num,"is odd");
 // }
 
- {
+{
+  //     // Function to find Fctorial of a number
 
-//     // Function to find Fctorial of a number
+  // //prompt("Enter Number yo want find Fictorial : ");
 
-// //prompt("Enter Number yo want find Fictorial : ");
+  // let input = 5;
 
-// let input = 5;
+  //  console.log("Fictorial of",input,"is",fictorial(input));
 
-//  console.log("Fictorial of",input,"is",fictorial(input));
+  // //alert("Fictorial of " + input  + " is " + fictorial(input));
 
-// //alert("Fictorial of " + input  + " is " + fictorial(input));
-
-function fictorial(num){
-
-    let fact=1;
+  function fictorial(num) {
+    let fact = 1;
     let i;
 
-    for(i=1;i<=num;i++){
-
-fact = fact*i;
-
+    for (i = 1; i <= num; i++) {
+      fact = fact * i;
     }
 
     return fact;
-    
-}
-
-
+  }
 }
 
 {
+  // funtion to find LCM of two numbers.
 
-// funtion to find LCM of two numbers.
+  //let a=5,b=11;
 
-//let a=5,b=11;
+  //console.log("LCM of",a,"and",b,"is",lcm(5,11));
 
-//console.log("LCM of",a,"and",b,"is",lcm(5,11));
+  function lcm(x, y) {
+    let gre = 0;
 
-function lcm(x,y){
-
- let gre = 0;
-
-if(x>y){gre = x;}
-
-else{gre=y;}
-
-let LCM = 0;
-
-while(1){
-
-    if((gre % x == 0) && (gre % y == 0)){
-
-LCM = gre;
-break;
-
+    if (x > y) {
+      gre = x;
+    } else {
+      gre = y;
     }
-gre++;
 
+    let LCM = 0;
+
+    while (1) {
+      if (gre % x == 0 && gre % y == 0) {
+        LCM = gre;
+        break;
+      }
+      gre++;
+    }
+
+    return LCM;
+  }
 }
-
-return LCM;
-
-}
-
-}
-
 
 // let student = {
 
@@ -348,7 +322,6 @@ return LCM;
 // console.log(ass);
 // }
 
-
 // {
 //     let a = 5**2;
 
@@ -356,8 +329,7 @@ return LCM;
 // }
 
 {
-    let a = (true) === 1;
-    console.log(a)
-    console.log(!true===false);
+  let a = true === 1;
+  console.log(a);
+  console.log(!true === false);
 }
-
