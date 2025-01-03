@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Portfolio</a>
+        
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#abo">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skills">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section  > 
+        <div class="home">
+          <h1>Welcome to My Portfolio</h1>
+          <p class="lead">My Work and Skills</p>
+        </div>
+      </section>
+      <aside><img src="me.jpg" alt="me" width="300" height="300"></aside>
+
+      <section class="py-5">
+        <div class="about" id="abo">
+         <h2>👋 Hello! I am Murtaza Tanveer</h2>
+          <div><p>I am a passionate software developer with expertise in programming languages such as C, C++, and Java. With a strong foundation in Data Structures and Algorithms (DSA), I enjoy solving complex problems and optimizing performance. I am also proficient in building robust, scalable applications using Spring Boot, leveraging my backend development skills to create efficient and maintainable systems. Constantly eager to learn and grow, I thrive on exploring new technologies and delivering innovative solutions.</p></div>
+        </div>
+      </section>
+
+      <section id="skills"> 
+        <div id="home">
+          <h3>Skills and Projects</h3>
+
+          <div id="images">
+            <a href="https://github.com/murtazatanveer/Deawoo-Terminal-System"><img src="c.jpg" alt="c" id="c"></a>
+            <a href="https://github.com/murtazatanveer/Deawoo-Terminal-System"><img src="c++.jpg" alt="c++"></a>
+            <a href="https://github.com/murtazatanveer/Object-Oriented-Programming"><img src="java.jpg" alt="java"></a>
+            <a href="https://github.com/murtazatanveer/Data-Structures-And-Alogorithms"><img src="dsa.jpg" alt="DSA"></a>
+            <a href="https://github.com/murtazatanveer/HTML-CSS-JAVASCRIPT"><img src="js.jpg" alt="JS"></a>
+            
+          </div>
+          <div id="socialLinks">
+            <a href="https://github.com/murtazatanveer"><img src="github.jpg" alt="github"></a>
+            <a href="https://leetcode.com/u/murtazatanveer/"><img src="leetcode.jpg" alt="leetcode"></a>
+
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="py-5 bg-light">
+        <div class="con">
+          <h2 class="text-center mb-4">Contact Me</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <form>
+               
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+        
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Write your message here" required></textarea>
+                </div>
+               
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+  </body>
+</html>
