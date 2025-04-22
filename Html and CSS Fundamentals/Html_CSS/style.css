@@ -1,17 +1,56 @@
+body {
+  background: linear-gradient(
+    to top left,
+    rgba(24, 26, 31, 0.831),
+    rgb(24, 26, 31)
+  );
+  color: rgb(212, 219, 218);
+  font-family: sans-serif;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+li:hover {
+  color: green;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#me {
+  height: 80px;
+  width: 90px;
+  border-radius: 20px;
+}
+
+#javaimg {
+  height: 180px;
+  width: 300px;
+}
+
+#oop {
+  height: 75px;
+  width: 75px;
+}
+
+#dsa {
+  height: 75px;
+  width: 100px;
+}
+
 h1 {
   color: rgb(252, 255, 255);
   text-align: center;
-  font-family: sans-serif;
 }
 
 h2,
-h3,
 h4 {
   color: rgb(252, 255, 255);
-  font-family: sans-serif;
 }
 
-h2 h3 {
+h2 {
   font-size: 28px;
 }
 
@@ -19,30 +58,42 @@ h4 {
   font-size: 22px;
 }
 
+h2:hover {
+  letter-spacing: 0.03cm;
+  color: black;
+  background-color: rgb(236, 249, 0);
+  width: 12cm;
+  margin-left: 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+}
+
+h4:hover {
+  letter-spacing: 0.03cm;
+  color: yellow;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+}
+
 p {
-  color: rgb(212, 219, 218);
   font-family: "Gill Sans";
   line-height: 1.8;
   font-style: italic;
-}
-
-body {
-  background: linear-gradient(
-    to top left,
-    rgba(24, 26, 31, 0.831),
-    rgb(24, 26, 31)
-  );
+  word-spacing: 0.2cm;
 }
 
 li {
-  color: rgb(212, 219, 218);
   font-family: "Gill Sans";
   line-height: 2;
-  font-style: italic;
+  color: white;
 }
 
-a {
+a:link,
+a:visited {
   color: yellowgreen;
+  text-decoration: none;
 }
 
 #copy {
@@ -61,19 +112,23 @@ a {
 aside {
   border-top: 5px solid rgba(172, 194, 51, 0.553);
   border-bottom: 5px solid rgba(172, 194, 51, 0.553);
+  background-color: rgba(97, 98, 101, 0.514);
+  margin-left: 0cm;
+  width: 12cm;
 }
 
-li:first-child {
-  font-weight: bold;
+aside,
+.boxes {
+  margin-top: 1.7cm;
 }
+
+/* li:nth-child(2) {
+  font-weight: bold;
+} */
 
 /* body article h4 {
   color: red;
 } */
-
-a:link {
-  text-decoration: none;
-}
 
 a:hover {
   color: rgba(252, 246, 62, 0.952);
@@ -81,3 +136,43 @@ a:hover {
   font-style: oblique;
   text-decoration: solid rgba(252, 217, 62, 0.952);
 }
+
+a:active {
+  color: rgb(255, 85, 0);
+  font-style: italic;
+  letter-spacing: 0.07cm;
+}
+
+article p:hover {
+  color: yellow;
+}
+
+/* LVHA */
+
+/*In CSS, certain properties are inherited by child elements from their parent elements,
+ while others are not.
+ 
+These Common Properties get Inherited from parent to child
+
+
+font-family
+
+font-size
+
+font-weight
+
+font-style
+
+line-height
+
+letter-spacing
+
+text-align
+
+text-transform
+
+color
+
+text-indent
+ 
+*/

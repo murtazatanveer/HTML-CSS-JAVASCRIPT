@@ -1,0 +1,14 @@
+div {
+  text-align: center;
+  border: 3px solid green;
+  margin: 7cm 2cm;
+  width: 20cm;
+  height: 6cm;
+  /* padding: 30px 60px; */
+}
+
+h3 {
+  border: 1px solid orangered;
+  margin: 2cm 0cm;
+  width: 100%;
+}
