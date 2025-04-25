@@ -26,9 +26,13 @@ li:hover {
 }
 
 #me {
-  height: 80px;
-  width: 90px;
-  border-radius: 20px;
+  height: 50px;
+  width: 60px;
+  float: left;
+}
+
+#name {
+  margin-left: 2cm;
 }
 
 #javaimg {
@@ -68,7 +72,7 @@ h2:hover {
   letter-spacing: 0.03cm;
   color: black;
   background-color: rgb(236, 249, 0);
-  width: 12cm;
+  width: 100%;
   margin-left: 0;
   font-weight: bolder;
   text-transform: uppercase;
@@ -119,8 +123,8 @@ aside {
   border-top: 5px solid rgba(172, 194, 51, 0.553);
   border-bottom: 5px solid rgba(172, 194, 51, 0.553);
   background-color: rgba(97, 98, 101, 0.514);
-  margin-left: 0cm;
-  width: 12cm;
+  width: 9.3cm;
+  margin-top: 3cm;
 }
 
 aside,
@@ -155,7 +159,7 @@ article p:hover {
 
 nav a:link {
   display: inline-block;
-  margin: 20px 20px;
+  margin: 20px 7px;
 }
 
 nav a:link:last-child {
@@ -165,7 +169,7 @@ nav a:link:last-child {
 #like {
   position: absolute;
   right: 0.5cm;
-  top: 121.7cm;
+  bottom: 0.5cm;
   background-color: rgba(28, 28, 28, 0.571);
   color: wheat;
   border: 1px solid white;
@@ -185,8 +189,8 @@ header > h1 > big::after {
   display: inline-block;
   content: "TOP";
   padding: 2px 5px;
-  top: 20px;
-  right: 15px;
+  top: 9px;
+  right: 27px;
   background-color: #ffe70e;
   color: rgb(95, 93, 93);
   font-size: 20px;
@@ -196,4 +200,12 @@ header > h1 > big:hover::after {
   color: rgb(6, 253, 154);
   background-color: transparent;
   transition: 0.2s ease-in-out;
+}
+
+hr {
+  margin-bottom: 1cm;
+}
+
+nav {
+  width: 60%;
 }

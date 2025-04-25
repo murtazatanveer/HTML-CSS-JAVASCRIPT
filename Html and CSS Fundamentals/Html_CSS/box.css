@@ -1,14 +1,25 @@
-div {
+div,
+article,
+aside {
+  box-sizing: border-box;
   text-align: center;
   border: 3px solid green;
-  margin: 7cm 2cm;
-  width: 15cm;
-  height: 5cm;
-  padding: 30px 60px;
+  width: 50%;
+  height: 2cm;
+  padding: 0.5cm;
 }
 
-h3 {
-  border: 1px solid orangered;
-  margin: 2.5cm 0cm;
-  width: 100%;
+div {
+  float: left;
+}
+
+article {
+  float: right;
+}
+
+aside {
+  float: left;
+}
+* {
+  margin: 0.2cm 0cm;
 }

@@ -1,0 +1,28 @@
+#box {
+  position: relative;
+  background-color: yellow;
+  display: block;
+  height: 5cm;
+  width: 15cm;
+  border: 3px solid orangered;
+}
+
+div {
+  border: 1px solid green;
+  background-color: rgb(24, 169, 82);
+  width: 48%;
+  height: 46%;
+}
+
+#one {
+  float: left;
+}
+
+#three {
+  float: left;
+}
+
+* {
+  float: right;
+  margin: 3px;
+}

@@ -3,10 +3,15 @@ body {
   font-weight: bolder;
 }
 
+*::selection {
+  background-color: black;
+  color: yellow;
+}
+
 article {
   position: relative;
   border: 6px solid black;
-  width: 1000px;
+  width: 870px;
   margin: 1cm auto;
 }
 
@@ -23,6 +28,7 @@ article {
 #price {
   font-weight: bolder;
   font-size: 24px;
+  float: left;
 }
 
 #shipment {
@@ -30,6 +36,12 @@ article {
   text-transform: uppercase;
   font-weight: bolder;
   color: #777;
+  float: right;
+  margin-top: 33px;
+}
+
+#center p:nth-child(3) {
+  clear: both;
 }
 
 #info:link,
@@ -86,7 +98,7 @@ article {
 }
 
 #colours > div:hover {
-  padding: 5px;
+  padding: 3px;
   transition: 0.3s ease-in-out;
 }
 
@@ -127,4 +139,27 @@ article {
   background-color: rgb(233, 52, 52);
   top: -18px;
   left: -42px;
+}
+
+#left,
+#center,
+#right {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  float: left;
+}
+
+#center {
+  width: 330px;
+  padding-left: 1.3cm;
+}
+
+#right {
+  padding-left: 0.8cm;
+  width: 280px;
+}
+
+#right > h3 {
+  padding-left: 0.6cm;
 }
