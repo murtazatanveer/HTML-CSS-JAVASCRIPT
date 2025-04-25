@@ -31,3 +31,9 @@ letter-spacing,text-align,text-transform,color,text-indent)
 =>Float
 
 => Box-Sizing
+
+=> Flex Box (display:flex;)
+
+=> Flex Box Properties (flex-direction,align-items,justify-content)
+
+=>align-items , align-self(vertically) , justify-content , align-self(horizontally) , order , flex-grow , flex-shrink , flex-basis

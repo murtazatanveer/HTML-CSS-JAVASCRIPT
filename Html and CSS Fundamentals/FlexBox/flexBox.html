@@ -6,36 +6,74 @@
     <title>Flex Box</title>
 
     <style>
-      .box {
-        display: flex;
-        margin: 400px;
-        flex-direction: row;
-        border: 5px solid rgb(205, 28, 28);
-        margin-left: 125px;
-        border-radius: 5px;
-        width: 1000px;
-        height: 230px;
-      }
-
-      .box > div {
-        margin: 60px;
-        border: 3px solid rgb(144, 212, 95);
-        width: 600px;
-
-        text-align: center;
-        line-height: 6;
-      }
       body {
         background-color: wheat;
+      }
+      .box {
+        display: flex;
+        flex-direction: row;
+        height: 90px;
+        width: 550px;
+        border: 5px solid rgb(205, 28, 28);
+        border-radius: 5px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+      }
+
+      .box:hover {
+        /* flex-direction: row-reverse; */
+        align-items: flex-end;
+      }
+
+      section div {
+        color: white;
+        width: 1.3cm;
+        height: 50%;
+        box-sizing: border-box;
+      }
+
+      p {
+        text-align: center;
+      }
+      /* #b1,
+      #b3,
+      #b5 {
+        align-self: flex-end;
+      } */
+
+      #b1 {
+        background-color: red;
+      }
+
+      #b2 {
+        background-color: green;
+      }
+
+      #b3 {
+        background-color: blue;
+      }
+
+      #b4 {
+        background-color: rgb(214, 188, 20);
+      }
+
+      #b5 {
+        background-color: brown;
+      }
+
+      #b6 {
+        background-color: orchid;
       }
     </style>
   </head>
   <body>
     <section class="box">
-      <div>Box 1</div>
-      <div>Box 2</div>
-      <div>Box 3</div>
-      <div>Box 4</div>
+      <div id="b1"><p>Box 1</p></div>
+      <div id="b2"><p>Box 2</p></div>
+      <div id="b3"><p>Box 3</p></div>
+      <div id="b4"><p>Box 4</p></div>
+      <div id="b5"><p>Box 5</p></div>
+      <div id="b6"><p>Box 6</p></div>
     </section>
   </body>
 </html>
