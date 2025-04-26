@@ -36,4 +36,6 @@ letter-spacing,text-align,text-transform,color,text-indent)
 
 => Flex Box Properties (flex-direction,align-items,justify-content)
 
-=>align-items , align-self(vertically) , justify-content , align-self(horizontally) , order , flex-grow , flex-shrink , flex-basis
+=> align-items , align-self(vertically) , justify-content , align-self(horizontally) , order(-1,0,1) , flex-grow(0,1,2) , flex-shrink(0, 1) , flex-basis
+
+=> flex basis , flex-grow ,flex-shrink , gap all increases elements of box according to direction of flex.
