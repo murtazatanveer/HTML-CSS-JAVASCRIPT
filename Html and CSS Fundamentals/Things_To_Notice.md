@@ -39,3 +39,5 @@ letter-spacing,text-align,text-transform,color,text-indent)
 => align-items , align-self(vertically) , justify-content , align-self(horizontally) , order(-1,0,1) , flex-grow(0,1,2) , flex-shrink(0, 1) , flex-basis
 
 => flex basis , flex-grow ,flex-shrink , gap all increases elements of box according to direction of flex.
+
+=>flex grow , flex shrink and basis is applied on chld elements not parent element
