@@ -8,58 +8,59 @@ console.log("My First Code in JS. (24th Jan 2024)");
 let full_name = "murtaza tanveer";
 
 {
-
-    age=21;
+  age = 21;
   address = "jhelum";
- // a = address + age;
-
+  // a = address + age;
 }
 //console.log("\n",a,"\n");
 {
-
-    console.log("My Introduction\n","Name : ",full_name , "\n","Age : ",age,"\n","Address : ",address);
+  console.log(
+    "My Introduction\n",
+    "Name : ",
+    full_name,
+    "\n",
+    "Age : ",
+    age,
+    "\n",
+    "Address : ",
+    address
+  );
 }
 
 let a_ = 10;
-let b_= 5;
+let b_ = 5;
 
-console.log("Sum : ",a+b);
-console.log("Multiply : ",a*b);
-console.log("Sub : ",a-b);
-console.log("Sum : ",a/b);
+console.log("Sum : ", a + b);
+console.log("Multiply : ", a * b);
+console.log("Sub : ", a - b);
+console.log("Sum : ", a / b);
 
- if((a+b)==15){
-
-console.log(a+b);
-
- }
+if (a + b == 15) {
+  console.log(a + b);
+}
 
 let str = "murtaza ";
 let str_2 = "tanveer";
 let number = 15;
 let num_2 = 5;
 
-console.log(str+str_2);
+console.log(str + str_2);
 
-if(isNaN(number*num_2)){
-
-    console.log("FINE");
-     console.log(number*num_2);
-     console.log(isNaN(number*num_2));
-
-}
-
-else{
-    console.log("NOT FINE");
-     console.log(number*num_2);
+if (isNaN(number * num_2)) {
+  console.log("FINE");
+  console.log(number * num_2);
+  console.log(isNaN(number * num_2));
+} else {
+  console.log("NOT FINE");
+  console.log(number * num_2);
 }
 
 let variable_1;
 console.log(variable_1);
 
- console.log("str + number = ",str+number);
+console.log("str + number = ", str + number);
 
- console.log("str - number = ",str-number);
+console.log("str - number = ", str - number);
 
 let variable;
 console.log(variable); // Outputs: undefined
@@ -70,9 +71,9 @@ function exampleFunction(param) {
 
 exampleFunction();
 
-let price =100;
+let price = 100;
 
-console.log(typeof(price));
+console.log(typeof price);
 
 let uniqueKey = Symbol("unique");
 
@@ -82,26 +83,24 @@ name_1 = "murtaza";
 
 //Objects in JS
 
-let person= new Object();
+let person = new Object();
 
- person.name="murtaza";
+person.name = "murtaza";
 
- person.age = 21;
+person.age = 21;
 
- person.address="Jhelum";
+person.address = "Jhelum";
 
- console.log(person);
+console.log(person);
 
- { person = {
+{
+  person = {
+    name: "murtaza",
+    age: 21,
+    address: "Jhelum",
+  };
 
- name : "murtaza",
- age:21,
-address:"Jhelum"
-
-};
-
-person.is_student=false;
-
+  person.is_student = false;
 }
 
 console.log(person);
@@ -116,116 +115,121 @@ person_2.is_student = false;
 
 console.log(person_2);
 
- console.log(" Name : ",person.name,"\n","Age : ",person.age,"\n","Address",person.address);
+console.log(
+  " Name : ",
+  person.name,
+  "\n",
+  "Age : ",
+  person.age,
+  "\n",
+  "Address",
+  person.address
+);
 
- x = person;
+x = person;
 
-x.age=35;
+x.age = 35;
 
-console.log("\n\n Name : ",person.name,"\n","Age : ",person.age,"\n","Address",person.address);
+console.log(
+  "\n\n Name : ",
+  person.name,
+  "\n",
+  "Age : ",
+  person.age,
+  "\n",
+  "Address",
+  person.address
+);
 
- const person = {
+const person = {
+  name: "moon",
+  age: 21,
+  address: "J",
+  is_student: true,
+};
 
- name : "moon",
-age:21,
-address:"J",
-is_student:true
+person.address = "kot phaphra";
 
-}
-
-person.address="kot phaphra";
-
-person.gender="male";``
+person.gender = "male";
+``;
 
 console.log(person);
 
 alert("Murtaza here");
 
 {
-    let str="10";
-    let num = "5";
-    let result = num * str;
-    console.log(typeof(result),result);
+  let str = "10";
+  let num = "5";
+  let result = num * str;
+  console.log(typeof result, result);
 }
 
 {
+  const vehicle = {
+    compay: "Honda",
+    type: "Bike",
+    colour: "Black",
+    cc: "CD70",
+    owner: {
+      name: "murtaza",
+      address: "jhelum",
+    },
+  };
 
-const vehicle = {
+  vehicle.owner.age = 21;
 
-    compay : "Honda",
-    type : "Bike",
-    colour : "Black",
-    cc : "CD70",
-    owner : {
+  console.log(vehicle.owner.address);
 
-        name : "murtaza",
-        address : "jhelum",
-    }
-
+  console.log(vehicle);
 }
 
-vehicle.owner.age=21;
-
-console.log(vehicle.owner.address);
-
-console.log(vehicle);
-
-}
-
-let x_ = 10+9-13+17*2;
+let x_ = 10 + 9 - 13 + 17 * 2;
 
 console.log(x_);
 
-console.log('9' - '5'); // -> 4
- console.log('19' - '13' + '17'); // -> '617'
- console.log('9' - '13' + 17); // -> 23
- console.log('123' < 57); // -> false
- console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143
+console.log("9" - "5"); // -> 4
+console.log("19" - "13" + "17"); // -> '617'
+console.log("9" - "13" + 17); // -> 23
+console.log("123" < 57); // -> false
+console.log(5 + 6 + "4" + 9 - 4 - 2); // -> 1143
 
-if(isNaN("5" * "m") == true) {
-    console.log("equal");
+if (isNaN("5" * "m") == true) {
+  console.log("equal");
+} else {
+  console.log("Not Equal");
 }
 
-else{
-    console.log("Not Equal");
+console.log(typeof isNaN("5" * "m"));
+
+if (typeof 10 == "number") {
+  console.log("hello");
 }
 
-console.log(typeof(isNaN("5" * "m")));
+// Using prompt to get input from the user
+let userInput = prompt("Enter something:");
 
+// Displaying the user input
+console.log("User input:", userInput);
 
-if(typeof(10)== "number"){
-    console.log("hello");
-}
+// Using prompt to get input from the user
+let Input = prompt("Enter : ");
 
- // Using prompt to get input from the user
- let userInput = prompt("Enter something:");
+// Displaying the user input
+console.log("User enters : ", Input);
 
- // Displaying the user input
- console.log("User input:", userInput);
-
-  // Using prompt to get input from the user
-  let Input = prompt("Enter : ");
-
-  // Displaying the user input
-  console.log("User enters : ",Input);
-
-let x=10;
- console.log(x);
-x="murtaza";
+let x = 10;
+console.log(x);
+x = "murtaza";
 console.log(x);
 
 let num = prompt("Enter Number : ");
 
-if(num%2==0){
-
-    alert("even number");
-    console.log(num,"is even");
-
-}
-
-else{
-    alert("Odd Number");
-    console.log(num,"is odd");
+if (num % 2 == 0) {
+  alert("even number");
+  console.log(num, "is even");
+} else {
+  alert("Odd Number");
+  console.log(num, "is odd");
 }
 
 {
@@ -282,11 +286,9 @@ else{
 }
 
 let student = {
-
-    name : "murtaza",
-    age : 21,
-    is_student : false
-
+  name: "murtaza",
+  age: 21,
+  is_student: false,
 };
 
 console.log(student);
@@ -297,35 +299,37 @@ console.log(student);
 
 let a = prompt("Enter num : ");
 
-if(a==10){alert("hello");}
-
-{ let a = "boolean" === (typeof(true)) ? "fine" : "not fine";
-
-console.log(a); }
-
-{
-
-let a=5;
-
-let b=++a;
-
-console.log(b);
-console.log(a);
-
+if (a == 10) {
+  alert("hello");
 }
 
 {
-let ass="fine";
+  let a = "boolean" === typeof true ? "fine" : "not fine";
 
- ass = ass + 1; // same as : ass++;
-
-console.log(ass);
+  console.log(a);
 }
 
 {
-    let a = 5**2;
+  let a = 5;
 
-    console.log(a);
+  let b = ++a;
+
+  console.log(b);
+  console.log(a);
+}
+
+{
+  let ass = "fine";
+
+  ass = ass + 1; // same as : ass++;
+
+  console.log(ass);
+}
+
+{
+  let a = 5 ** 2;
+
+  console.log(a);
 }
 
 {
@@ -333,7 +337,6 @@ console.log(ass);
   console.log(a);
   console.log(!true === false);
 }
-
 
 // Number guessing game. This Game generates a random number between 1 and 500 and you want to guess it.
 
@@ -1162,4 +1165,3 @@ while(dice!==5){
 
   console.log(university.yearsToEstablish(2024));
 }
-
