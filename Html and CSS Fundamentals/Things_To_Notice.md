@@ -10,7 +10,7 @@ while others are not.
 (font-family,font-size,font-weight,font-style,line-height
 letter-spacing,text-align,text-transform,color,text-indent)
 
-=> Selectors in CSS.(id,classes,decendent,element etc)
+=> Selectors in CSS.(id,classes,element,universal)
 
 => Pseudo Classes in CSS.
 
@@ -41,3 +41,9 @@ letter-spacing,text-align,text-transform,color,text-indent)
 => flex basis , flex-grow ,flex-shrink , gap all increases elements of box according to direction of flex.
 
 =>flex grow , flex shrink and basis is applied on chld elements not parent element
+
+=> Grid (display:grid;)
+
+=> Grid Properties (grid-template-columns , grid-template-rows , gap)
+
+=> fr , align-contect , justify-content , align-items , justify-items , align-self , justify-self

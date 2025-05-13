@@ -1,9 +1,14 @@
 body {
-  background: linear-gradient(
-    to top left,
-    rgba(24, 25, 28, 0.9),
-    rgb(60, 64, 75)
-  );
+  background: rgba(0, 0, 0, 0.671);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --custom_color: white;
 }
 
 #card {
@@ -14,13 +19,16 @@ body {
     #0997e4d7 100%
   );
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 5%;
+  position: relative;
   width: 300px;
   height: 460px;
   border-radius: 10px;
+}
+
+#card:hover {
+  transition: 1s all;
+  box-shadow: 0 0 40px 25px #4b7b94fe, 0 0 40px 50px #eaedeffe;
 }
 
 #logo {
@@ -51,7 +59,7 @@ body {
   text-align: center;
   font-family: Arial;
   font-size: 24px;
-  color: white;
+  color: var(--custom_color);
   background-color: rgba(8, 136, 8, 0.735);
   font-weight: bolder;
 }
@@ -60,7 +68,7 @@ body {
   position: absolute;
   top: 49%;
   left: 33%;
-  border: 7px solid white;
+  border: 7px solid var(--custom_color);
 }
 
 #reg-no {
