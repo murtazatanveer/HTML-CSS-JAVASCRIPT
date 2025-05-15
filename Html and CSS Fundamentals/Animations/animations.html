@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: box;
+      }
+      body {
+        background-color: rgb(100, 97, 97);
+      }
+
+      #box {
+        margin-top: 5%;
+        width: 20%;
+        height: 1cm;
+        border: 3px solid wheat;
+        animation-name: boxMovement;
+        animation-delay: 0ms;
+        animation-direction: alternate;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes boxMovement {
+        0% {
+          margin-left: 0;
+        }
+        33%,
+        66% {
+          background-color: aliceblue;
+          width: 5%;
+        }
+
+        100% {
+          margin-left: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="box"></div>
+    </main>
+  </body>
+</html>

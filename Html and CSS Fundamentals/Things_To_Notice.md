@@ -47,3 +47,9 @@ letter-spacing,text-align,text-transform,color,text-indent)
 => Grid Properties (grid-template-columns , grid-template-rows , gap)
 
 => fr , align-contect , justify-content , align-items , justify-items , align-self , justify-self
+
+=> CSS Shadows (https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) and Custom variables.
+
+=> CSS Animations (https://www.w3schools.com/css/css3_animations.asp)
+
+=> Positions In CSS (Static , Relative , Fixed , Absolute , Sticky)

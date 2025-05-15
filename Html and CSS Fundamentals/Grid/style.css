@@ -4,12 +4,13 @@ body {
 
 .parent {
   display: grid;
+
   /* grid-template-columns: 15% 15% 15%;
   grid-template-rows: 15% 15% 15%; */
   /* gap: 5%; */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 1cm;
+  gap: 2cm;
   /* row-gap: 30px; */
   border: 5px solid rgb(248, 95, 0);
   width: 100%;
