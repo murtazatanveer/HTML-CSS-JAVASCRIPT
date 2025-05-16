@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(67, 64, 64);
+      }
+      main {
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      div {
+        border: 5px solid green;
+        height: 20vh;
+        width: 20vw;
+        background-color: rgb(159, 184, 109);
+      }
+      div:hover {
+        transform: scale(3);
+        /* transform: rotate(45deg); */
+        /* transform: skew(20deg); */
+        /* transform: translate(-2cm, 4cm); */
+        transition: all 1s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <main><div class="box"></div></main>
+  </body>
+</html>

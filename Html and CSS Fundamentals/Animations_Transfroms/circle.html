@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Circle</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(67, 64, 64);
+      }
+      :root {
+        --speed: 3s;
+      }
+      main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        height: 28vh;
+        width: 80vw;
+        border-bottom: 10px solid rgba(0, 136, 255, 0.607);
+        margin-left: 10%;
+        margin-top: 20%;
+      }
+      .circle {
+        position: relative;
+        border: 10px solid green;
+        width: 4cm;
+        height: 4cm;
+        border-radius: 50%;
+        animation: mover var(--speed) linear 0ms infinite alternate-reverse,
+          moveToRight var(--speed) linear 0ms infinite alternate-reverse;
+      }
+
+      .hor {
+        height: 100%;
+        width: 1%;
+        border: 2px solid rgb(241, 244, 24);
+        margin-left: 49%;
+      }
+      .vir {
+        position: absolute;
+        height: 1%;
+        width: 100%;
+        border: 2px solid rgb(241, 244, 24);
+        bottom: 49%;
+      }
+      @keyframes mover {
+        to {
+          transform: rotate(0deg);
+        }
+        from {
+          transform: rotate(360deg);
+          /* background-color: rgb(119, 183, 41);
+          border: 0px solid transparent; */
+        }
+      }
+
+      @keyframes moveToRight {
+        to {
+          margin-left: 0;
+        }
+        from {
+          margin-left: 83%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="circle">
+        <div class="hor"></div>
+        <div class="vir"></div>
+      </div>
+    </main>
+  </body>
+</html>

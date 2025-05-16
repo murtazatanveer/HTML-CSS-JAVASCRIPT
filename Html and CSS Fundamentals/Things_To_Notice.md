@@ -53,3 +53,9 @@ letter-spacing,text-align,text-transform,color,text-indent)
 => CSS Animations (https://www.w3schools.com/css/css3_animations.asp)
 
 => Positions In CSS (Static , Relative , Fixed , Absolute , Sticky)
+
+=> Size Units In CSS.(inch,cm,mm,px,%,vh,vw,em,rem etc)
+
+=> Transitions In CSS.(transition: all 2s ease)
+
+=> Transform (Rotate , Scale , Skew , Translate)

@@ -142,6 +142,7 @@ article {
   background-color: rgb(233, 52, 52);
   top: -18px;
   left: -42px;
+  animation: sale 0.4s linear 0ms infinite alternate;
 }
 
 /*Layout Using Float
@@ -169,6 +170,8 @@ article {
   padding-left: 0.6cm;
 } */
 
+/*Layout Using Flex*/
+
 section {
   display: flex;
   gap: 40px;
@@ -181,4 +184,15 @@ section {
 
 #right > h3 {
   padding-left: 0.6cm;
+}
+
+@keyframes sale {
+  from {
+    background-color: white;
+    color: black;
+  }
+  to {
+    background-color: rgb(233, 52, 52);
+    color: white;
+  }
 }

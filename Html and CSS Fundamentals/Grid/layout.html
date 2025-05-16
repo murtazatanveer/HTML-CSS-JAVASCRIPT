@@ -5,31 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lauout</title>
     <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
       .parent {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(auto-fit, minmax(3cm, 7cm)); */
         grid-template-rows: repeat(5, 1fr);
-        gap: 12px;
+        grid-template-areas:
+          "one one two" "three three two" "four five two"
+          "six seven seven" "eight seven seven";
+        gap: 1rem;
         width: 100%;
-        height: 10cm;
+        height: 80%;
         border: 3px solid orangered;
       }
       div > div {
         border: 2px solid green;
       }
       .div1 {
-        grid-column: 1/3;
+        /* grid-column: 1/3; */
+        grid-area: one;
       }
       .div2 {
-        grid-row: 1/4;
-        grid-column: 3/4;
+        /* grid-row: 1/4;
+        grid-column: 3/4; */
+        grid-area: two;
       }
       .div3 {
-        grid-column: 1/3;
+        /* grid-column: 1/3; */
+        grid-area: three;
+      }
+      .div4 {
+        grid-area: four;
+      }
+      .div5 {
+        grid-area: five;
+      }
+      .div6 {
+        grid-area: six;
+      }
+
+      .div8 {
+        grid-area: eight;
       }
       .div7 {
-        grid-column: 2/4;
-        grid-row: 4/6;
+        grid-area: seven;
+        /* grid-column: 2/4;
+        grid-row: 4/6; */
       }
     </style>
   </head>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        margin: 10px auto;
+        border: 5px solid green;
+        height: 30vh;
+        width: 80vw;
+      }
+      .outer {
+        margin: 20px auto;
+        border: 5px solid green;
+        height: 15vh;
+        width: 30%;
+        font-size: 5px;
+      }
+      .em {
+        font-size: 3em;
+        border: 2px solid orange;
+        margin: 1.8em auto;
+        width: 60%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">30 View Height and 80 View Width</div>
+    <div class="outer">
+      <p class="em">EM Unit in CSS</p>
+      <p />
+    </div>
+  </body>
+</html>
