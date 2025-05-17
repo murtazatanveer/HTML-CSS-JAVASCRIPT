@@ -58,4 +58,8 @@ letter-spacing,text-align,text-transform,color,text-indent)
 
 => Transitions In CSS.(transition: all 2s ease)
 
-=> Transform (Rotate , Scale , Skew , Translate)
+=> 2D Transform (Rotate , Scale , Skew , Translate)
+
+=> Grid (Grid Template Areas , repeat(autofit,minmax(10px,30px)))
+
+=> 3D Transforms and Rotating Card on its center 180 degrees.

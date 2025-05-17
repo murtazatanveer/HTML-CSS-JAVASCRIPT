@@ -20,21 +20,61 @@
         height: 100vh;
       }
       div {
+        position: relative;
+        display: grid;
+        place-items: center;
         border: 5px solid green;
-        height: 20vh;
-        width: 20vw;
+        box-shadow: 10px 10px 20px rgb(161, 159, 157);
+        /* border-radius: 50%; */
+        height: 3.5cm;
+        width: 3.5cm;
         background-color: rgb(159, 184, 109);
+        /* animation: boxSpin 5s linear 0ms infinite; */
       }
+
+      div > p {
+        font-size: 20px;
+        padding-left: 5px;
+        color: rgb(105, 88, 21);
+      }
+
+      /* @keyframes boxSpin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      } */
+
       div:hover {
+        /* transform-origin: top right; */
+
+        /* 2D Trasnforms
         transform: scale(3);
-        /* transform: rotate(45deg); */
-        /* transform: skew(20deg); */
-        /* transform: translate(-2cm, 4cm); */
+        transform: rotate(90deg);
+        transform: skew(20deg);
+        transform: translate(-2cm, 4cm);
+        transform: translate(-3cm); */
+        /* transform: skew(10deg) translate(3cm, -3cm) rotate(360deg) scale(2.5); */
+
+        /* 3D Transforms*/
+        /* transform: rotateX(135deg); */
+        /* transform: rotateY(135deg); */
+        /* transform: rotateZ(120deg); */
+        /* transform: rotate3d(1, 1, 1, 360deg); */
+        /* transform: perspective(1000px) translateZ(-3cm); */
+        /* transform: perspective(1000px) translate3d(-3cm, 3cm, -10cm); */
+
+        transform: perspective(300px) skewX(40deg) rotateX(60deg);
+
         transition: all 1s linear;
       }
     </style>
   </head>
   <body>
-    <main><div class="box"></div></main>
+    <main>
+      <div class="box"><p>Transforms Properties in CSS</p></div>
+    </main>
   </body>
 </html>

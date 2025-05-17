@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Animations</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(67, 64, 64);
+      }
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        width: 100vw;
+        height: 100vh;
+      }
+      .circle {
+        border: 20px solid transparent;
+        border-radius: 50%;
+        border-top-color: rgb(124, 151, 146);
+        height: 4cm;
+        width: 4cm;
+        animation: spinner 1.5s linear 0ms infinite;
+      }
+
+      @keyframes spinner {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .threeCircles {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 3cm;
+        height: 1cm;
+      }
+      .threeCircles > div {
+        border-radius: 50%;
+        height: 50%;
+        width: 15.5%;
+        animation: fadeOut 1.5s ease 0ms infinite alternate;
+      }
+
+      @keyframes fadeOut {
+        from {
+          background-color: rgb(67, 74, 67);
+        }
+        to {
+          height: 51%;
+          width: 16%;
+          background-color: rgba(124, 151, 146);
+        }
+      }
+
+      .threeShapes {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 4cm;
+        height: 1.3cm;
+      }
+      .threeShapes > div {
+        height: 27px;
+        width: 27px;
+        animation: shapesSpinner 1s ease-out 0ms infinite;
+      }
+      .red {
+        background-color: rgb(227, 37, 37);
+      }
+      .yellow {
+        background-color: rgb(196, 196, 55);
+      }
+      .blue {
+        background-color: rgb(53, 53, 247);
+      }
+
+      @keyframes shapesSpinner {
+        from {
+          transform: rotate(-45deg);
+        }
+        to {
+          transform: rotate(45deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="circle"></div>
+      <div class="threeCircles">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+      </div>
+      <div class="threeShapes">
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="blue"></div>
+      </div>
+    </main>
+  </body>
+</html>
