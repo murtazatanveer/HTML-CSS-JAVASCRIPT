@@ -19,7 +19,7 @@
           "six seven seven" "eight seven seven";
         gap: 1rem;
         width: 100%;
-        height: 80%;
+        height: 95%;
         border: 3px solid orangered;
       }
       div > div {
@@ -55,6 +55,16 @@
         grid-area: seven;
         /* grid-column: 2/4;
         grid-row: 4/6; */
+      }
+
+      @media (max-width: 330px) {
+        .parent {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(7, 1fr);
+          grid-template-areas:
+            "one one" "three three" "seven seven"
+            "seven seven" "five two" "four two" "six eight";
+        }
       }
     </style>
   </head>

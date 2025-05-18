@@ -4,26 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flex Box</title>
-
     <style>
       body {
         background-color: wheat;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .box {
         display: flex;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
         flex-direction: row;
-        height: 5cm;
+        height: 40%;
         width: 100%;
         border: 5px solid rgb(205, 28, 28);
         border-radius: 5px;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-around;
-      }
-
-      .box:hover {
-        /* flex-direction: row-reverse; */
-        align-items: flex-end;
       }
 
       section div {
@@ -31,8 +30,10 @@
         color: white;
         /* width: 1.3cm; */
         /* height: 30%; */
-        flex-basis: 1.3cm;
+        flex-basis: 10%;
+        height: 24%;
         flex-shrink: 1;
+        align-self: flex-start;
       }
 
       p {
@@ -72,6 +73,44 @@
       #b6 {
         background-color: orchid;
         /* flex-grow: 1; */
+      }
+
+      #b1,
+      #b3,
+      #b5 {
+        animation: animation_1 1s linear infinite alternate;
+      }
+
+      #b2,
+      #b4,
+      #b6 {
+        animation: animation_2 1s linear infinite alternate;
+      }
+
+      @media (max-width: 370px) {
+        .box {
+          flex-direction: column;
+          height: 100%;
+          width: 40%;
+        }
+      }
+
+      @keyframes animation_1 {
+        from {
+          margin-top: 0;
+        }
+        to {
+          margin-top: 29.5%;
+        }
+      }
+
+      @keyframes animation_2 {
+        from {
+          margin-top: 29.5%;
+        }
+        to {
+          margin-top: 0;
+        }
       }
     </style>
   </head>
