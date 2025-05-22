@@ -12,7 +12,7 @@ article {
   position: relative;
   border: 6px solid black;
   width: 900px;
-  margin: 1cm auto;
+  margin: 3cm auto;
 }
 
 #productTitle {
@@ -194,5 +194,20 @@ section {
   to {
     background-color: rgb(233, 52, 52);
     color: white;
+  }
+}
+
+@media (max-width: 460px) {
+  article {
+    height: 250vh;
+    width: 85vw;
+    margin: 0.5cm auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind Basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .title {
+        background-color: #e3d1d180;
+        height: 25%;
+        word-spacing: 4px;
+        letter-spacing: 1px;
+      }
+      article {
+        height: 390px;
+        width: 912px;
+      }
+      .shipment {
+        color: #777;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+      }
+      span {
+        height: 25px;
+        width: 25px;
+      }
+      .p {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="w-screen h-screen flex justify-center items-center">
+      <article class="border-8 border-black">
+        <header
+          class="text-center uppercase text-2xl font-extrabold h-20 flex justify-center items-center title"
+        >
+          <p>Converse Chuck Taylor All Star Low Top</p>
+        </header>
+        <section class="flex flex-row justify-between items-center">
+          <img src="challenge.jpg" alt="shoes" class="h-60 left" />
+          <div class="center h-60 basis-72">
+            <p class="float-left text-2xl font-extrabold price mt-5">$65.00</p>
+            <p class="float-right uppercase font-extrabold shipment mt-6">
+              Free shipping
+            </p>
+
+            <p class="clear-both font-bold details mt-20 pr-7 leading-tight">
+              Ready to dress up or down, these classic canvas Chucks are an
+              everyday wardrobe staple.
+            </p>
+            <p class="mt-4">
+              <a href="#" class="font-bold border-b-2 border-black"
+                >More Information &rarr;</a
+              >
+            </p>
+            <aside
+              class="flex flex-row justify-between items-center colours w-full h-1/4"
+            >
+              <span class="bg-red-800"></span><span class="bg-green-950"></span
+              ><span class="bg-yellow-800"></span
+              ><span class="bg-blue-800"></span><span class="bg-black"></span
+              ><span class="bg-amber-400"></span>
+            </aside>
+          </div>
+
+          <div
+            class="right h-60 font-bold basis-80 flex flex-col justify-start items-start pt-3"
+          >
+            <p class="p">Product Details</p>
+            <ul class="pl-5 grow">
+              <li class="list-disc mt-5">
+                Lightweight, durable canvas sneaker
+              </li>
+              <li class="list-disc mt-5">
+                Lightly padded footbed for added comfort
+              </li>
+              <li class="list-disc mt-5">Iconic Chuck Taylor ankle patch</li>
+            </ul>
+          </div>
+        </section>
+        <button
+          id="cart"
+          class="uppercase w-full h-14 font-bold bg-black text-white hover:bg-gray-100 hover:text-black"
+        >
+          Add to Cart
+        </button>
+      </article>
+    </main>
+  </body>
+</html>
