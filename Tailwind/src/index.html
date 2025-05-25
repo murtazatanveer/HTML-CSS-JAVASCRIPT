@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Flex Box in Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      img {
+        height: 100px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body
+    class="dark:bg-slate-900 h-screen w-screen grid items-center justify-center"
+  >
+    <main
+      class="border-4 border-green-500 h-screen w-[300px] flex flex-col items-center justify-evenly md:flex-row md:h-[300px] md:w-screen md:border-yellow-600"
+    >
+      <!-- sm:flex-row sm:w-screen sm:h-96 -->
+      <img
+        class="md:h-44 md:w-64"
+        src="https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="."
+      />
+      <img
+        class="md:h-44 md:w-64"
+        src="https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="."
+      />
+      <img
+        class="md:h-44 md:w-64"
+        src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="."
+      />
+      <img
+        class="md:h-44 md:w-64"
+        src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="."
+      />
+    </main>
+  </body>
+</html>
