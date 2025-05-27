@@ -69,3 +69,5 @@ letter-spacing,text-align,text-transform,color,text-indent)
 =>CSS Media Queries
 
 ===============Tailwind CSS================
+
+=>Applying CSS properties using Talwind CSS.
