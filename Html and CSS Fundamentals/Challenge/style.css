@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   font-weight: bolder;
+  background-color: #f0f0f0;
 }
 
 *::selection {
@@ -13,6 +14,8 @@ article {
   border: 6px solid black;
   width: 900px;
   margin: 3cm auto;
+  background-color: #fff;
+  box-shadow: 10px 10px 40px rgb(68, 67, 67);
 }
 
 #productTitle {

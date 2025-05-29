@@ -71,3 +71,7 @@ letter-spacing,text-align,text-transform,color,text-indent)
 ===============Tailwind CSS================
 
 =>Applying CSS properties using Talwind CSS.
+
+=> Implementation of CSS properties like margin,padding,flexbox,grid,float,heigth,width,text properties(bold,fint size etc),positioning.... in tailwind CSS.
+
+=> Github Login Page anf PW Skills clone.
