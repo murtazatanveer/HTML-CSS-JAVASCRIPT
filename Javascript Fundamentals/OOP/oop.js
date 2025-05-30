@@ -30,35 +30,41 @@ console.log(u1.constructor);
 
 class student {
   name;
-  age;
-  regno;
-  cgpa;
-  isGraduate;
+  #age;
+  #regno;
+  #cgpa;
+  #isGraduate;
 
   constructor(name, age, regno, cgpa, isGraduate) {
     this.name = name;
-    this.age = age;
-    this.regno = regno;
-    this.cgpa = cgpa;
-    this.isGraduate = isGraduate;
+    this.#age = age;
+    this.#regno = regno;
+    this.#cgpa = cgpa;
+    this.#isGraduate = isGraduate;
   }
 
   displayDetails() {
     console.log(
-      this.name + "\n" + this.age + "\n" + this.regno + "\n" + this.cgpa
+      this.name + "\n" + this.#age + "\n" + this.#regno + "\n" + this.#cgpa
     );
   }
 
   updateCgpa(c) {
-    cgpa = c;
+    this.cgpa = c;
   }
 }
 
 let s1 = new student("murtaza", 22, "SP23-BSE-096", 3, false);
 
 console.log(s1);
-s1.displayDetails();
+s1.updateCgpa(4);
+passingInstance(s1);
+function passingInstance(obj) {
+  obj.name = "MURTAZA TANVEER";
+}
+console.log(s1);
 
+s1.displayDetails();
 let s2 = {
   s: new student("ali", 22, "100", 3, false),
 };

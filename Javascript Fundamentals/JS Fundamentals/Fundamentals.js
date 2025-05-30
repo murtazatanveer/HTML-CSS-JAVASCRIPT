@@ -1333,4 +1333,77 @@ const ob = {
 
 ob.callingBlockScopedFunc();
 
+// Object and Array Cloning
 
+const education = {
+  university: "comsats",
+  sem: 5,
+  courses: ["WEB", "DSA", "OOP", "ML"],
+  cgpa: 2.97,
+};
+
+const physicalDetails = {
+  height: 5.9,
+  weigth: 75,
+};
+
+const per = Object.assign({}, physicalDetails, education);
+
+const per2 = { ...per };
+
+console.log(per.courses);
+console.log(per2.courses);
+
+per.courses.push("DB");
+per.cgpa = 3;
+console.log(per.courses);
+console.log(per2.courses, per2);
+
+const arr = [5, 7, [99, 88, 77], 10, 20];
+
+const copyArr = [...arr];
+
+console.log(copyArr[2]);
+
+arr[2].push(66);
+
+console.log(copyArr[2]);
+
+// Error Handling in JS
+
+try {
+  console.log(num);
+} catch (error) {
+  console.log(error.message);
+}
+
+console.log("Below Catch");
+
+try {
+  var age = 15;
+
+  if (age < 18) {
+    throw new Error("Age must be greator than 18");
+  }
+  console.log("Validation SuccessFull");
+} catch (error) {
+  console.log(`Validation Failed : ${error.message}`);
+} finally {
+  console.log("Proceeding to Next Step");
+}
+
+console.log(this.age);
+
+console.log(window.age);
+
+var obj = {
+  f1: function () {
+    console.log(this);
+  },
+  f2: () => {
+    console.log(this);
+  },
+};
+
+window.obj.f1();
+window.obj.f2();

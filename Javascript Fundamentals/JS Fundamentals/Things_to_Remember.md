@@ -28,4 +28,14 @@
 
 => Arrays and Strings.
 
-=> Global and block scoped concept.
+=> Global , Function and block scoped concept.
+
+=> Temporal Dead Zone in JS.
+
+=> Math object (Math.abs(-5) , Math.floor(1.9) , Math.ceil(1.6) etc) and Date object.
+
+=> Object , Array cloning and Garbage Collection.
+
+=> Error Handling in JS.
+
+=> Concept of Window Object.

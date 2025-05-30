@@ -7,3 +7,5 @@
 => Inheritence in JS.
 
 => Concept of Static in JS.
+
+=> Encapsulation (Public and Private).
