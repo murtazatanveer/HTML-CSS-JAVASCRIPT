@@ -13,19 +13,40 @@
         height: 100vh;
         width: 100vw;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
       }
+
+      #lowerBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+        height: 30%;
+        width: 90%;
+        border: 5px solid rgb(255, 72, 0);
+      }
+
+      footer div {
+        /* flex-grow: 1; */
+        color: white;
+        /* width: 1.3cm; */
+        /* height: 30%; */
+        flex-basis: 8%;
+        height: 30%;
+      }
+
       .box {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
         height: 40%;
-        width: 100%;
+        width: 90%;
         border: 5px solid rgb(205, 28, 28);
         border-radius: 5px;
-        align-items: center;
-        justify-content: space-around;
       }
 
       section div {
@@ -33,10 +54,9 @@
         color: white;
         /* width: 1.3cm; */
         /* height: 30%; */
-        flex-basis: 10%;
+        flex-basis: 8%;
         height: 24%;
         flex-shrink: 1;
-        align-self: flex-start;
       }
 
       p {
@@ -78,17 +98,19 @@
         /* flex-grow: 1; */
       }
 
-      #b1,
+      /* #b1,
       #b3,
-      #b5 {
+      #b5,
+      #last {
         animation: animation_1 1s linear infinite alternate;
       }
 
       #b2,
       #b4,
-      #b6 {
+      #b6,
+      #first {
         animation: animation_2 1s linear infinite alternate;
-      }
+      } */
 
       @media (max-width: 370px) {
         .box {
@@ -125,7 +147,9 @@
       <div id="b4"><p>Box 4</p></div>
       <div id="b5"><p>Box 5</p></div>
       <div id="b6"><p>Box 6</p></div>
-      <script src="dom.js"></script>
     </section>
+
+    <footer id="lowerBox"></footer>
+    <script src="dom.js"></script>
   </body>
 </html>
