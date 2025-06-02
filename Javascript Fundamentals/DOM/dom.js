@@ -115,3 +115,36 @@ console.log(box1Parent);
 // const p = b1.getElementsByTagName("p");
 
 // p[0].innerHTML = "<h1>HELLO</h1>";
+
+// box[0].className = "box1";
+
+// box[0].className = "box1 box";
+
+// box[0].classList.add("box1");
+
+// box[0].id = "box1";
+
+// box[0].classList.add("box2");
+
+// box[0].classList.remove("box2");
+
+// console.log(box[0].classList.toggle("box3"));
+// console.log(box[0].classList.toggle("box4"));
+// console.log(box[0].classList.toggle("box5"));
+
+// console.log(box[0].classList.toggle("box5"));
+
+// console.log(box[0].classList.contains("box"));
+
+// let x = box[0].classList;
+// console.log(x.length);
+
+// let boxStyle = getComputedStyle(box[0]);
+
+// for (let i = 0; i < boxStyle.length; i++) {
+//   lb.style.setProperty(boxStyle[i], boxStyle.getPropertyValue(boxStyle[i]));
+// }
+
+//console.log(firstDiv.style.getPropertyValue("background"));
+
+lb.classList.add("box", "box1");
