@@ -12,14 +12,19 @@
       }
       body {
         background-color: rgb(67, 64, 64);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100vw;
+        height: 100vh;
       }
       main {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
-        width: 100vw;
-        height: 100vh;
+        width: 70%;
       }
       .circle {
         border: 20px solid transparent;
@@ -27,7 +32,6 @@
         border-top-color: rgb(124, 151, 146);
         height: 4cm;
         width: 4cm;
-        animation: spinner 1.5s linear 0ms infinite;
       }
 
       @keyframes spinner {
@@ -44,9 +48,10 @@
       }
       .threeCircles > div {
         border-radius: 50%;
+        background-color: rgb(67, 74, 67);
+
         height: 50%;
         width: 15.5%;
-        animation: fadeOut 1.5s ease 0ms infinite alternate;
       }
 
       @keyframes fadeOut {
@@ -70,7 +75,6 @@
       .threeShapes > div {
         height: 27px;
         width: 27px;
-        animation: shapesSpinner 1s ease-out 0ms infinite;
       }
       .red {
         background-color: rgb(227, 37, 37);
@@ -90,6 +94,41 @@
           transform: rotate(45deg);
         }
       }
+
+      #buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        margin: 10% auto;
+        width: 50%;
+        height: 1cm;
+      }
+
+      button {
+        background-color: rgb(55, 142, 55);
+        color: wheat;
+        font-weight: bolder;
+        width: 30%;
+        border-radius: 20%;
+        border: 1px solid wheat;
+        cursor: pointer;
+      }
+      button:hover {
+        transform: scale(1.1);
+        transition: 0.2s linear;
+      }
+
+      .spinner {
+        animation: spinner 1.5s linear 0ms infinite;
+      }
+
+      .fadeOut {
+        animation: fadeOut 0.5s linear 0ms infinite alternate;
+      }
+      .shapesSpinner {
+        animation: shapesSpinner 1s ease-out 0ms infinite;
+      }
     </style>
   </head>
   <body>
@@ -106,5 +145,34 @@
         <div class="blue"></div>
       </div>
     </main>
+    <footer id="buttons">
+      <button id="start">START</button>
+      <button id="stop">STOP</button>
+    </footer>
+    <script>
+      let circle = document.getElementsByClassName("circle");
+
+      let threeCircles =
+        document.getElementsByClassName("threeCircles")[0].children;
+
+      let threeShapes =
+        document.getElementsByClassName("threeShapes")[0].children;
+
+      function toogleAnimation() {
+        circle[0].classList.toggle("spinner");
+        for (let i = 0; i < 3; i++) {
+          threeCircles[i].classList.toggle("fadeOut");
+          threeShapes[i].classList.toggle("shapesSpinner");
+        }
+      }
+
+      document
+        .getElementById("start")
+        .addEventListener("click", toogleAnimation);
+
+      document
+        .getElementById("stop")
+        .addEventListener("click", toogleAnimation);
+    </script>
   </body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Propagation Example</title>
+    <style>
+      body * {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        background-color: #f9f9f9;
+      }
+      body {
+        background-color: #eee;
+      }
+      main {
+        background-color: yellow;
+      }
+      div {
+        background-color: green;
+      }
+      button {
+        background-color: #a0a0a0;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <div id="myDiv">
+        <button id="myButton">Click Me!</button>
+      </div>
+    </main>
+
+    <script>
+      const html = document.documentElement;
+      const body = document.body;
+      const main = document.getElementById("main");
+      const myDiv = document.getElementById("myDiv");
+      const myButton = document.getElementById("myButton");
+
+      // --- Scenario 1: Bubbling Phase (Default) ---
+      // Listeners for Bubbling (capture: false or omitted)
+      html.addEventListener("click", (event) => {
+        console.log("Bubbling: Click on HTML");
+      });
+      body.addEventListener("click", (event) => {
+        console.log("Bubbling: Click on Body");
+      });
+      main.addEventListener("click", (event) => {
+        console.log("Bubbling: Click on Main");
+      });
+      myDiv.addEventListener("click", (event) => {
+        console.log("Bubbling: Click on Div");
+      });
+      myButton.addEventListener("click", (event) => {
+        console.log("Bubbling: Click on Button (Target)");
+      });
+
+      // --- Scenario 2: Capturing Phase ---
+      // Listeners for Capturing (capture: true)
+      // Let's use different messages to clearly distinguish
+      // html.addEventListener(
+      //   "click",
+      //   (event) => {
+      //     console.log("Capturing: Click on HTML");
+      //   },
+      //   { capture: true }
+      // );
+      // body.addEventListener(
+      //   "click",
+      //   (event) => {
+      //     console.log("Capturing: Click on Body");
+      //   },
+      //   { capture: true }
+      // );
+      // main.addEventListener(
+      //   "click",
+      //   (event) => {
+      //     console.log("Capturing: Click on Main");
+      //   },
+      //   { capture: true }
+      // );
+      // myDiv.addEventListener(
+      //   "click",
+      //   (event) => {
+      //     console.log("Capturing: Click on Div");
+      //   },
+      //   { capture: true }
+      // );
+      // myButton.addEventListener(
+      //   "click",
+      //   (event) => {
+      //     console.log("Capturing: Click on Button (Target)");
+      //   },
+      //   { capture: true }
+      // );
+    </script>
+  </body>
+</html>

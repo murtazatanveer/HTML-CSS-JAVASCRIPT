@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Measurement in JS</title>
+    <style>
+      main {
+        height: 100vh;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1%;
+        border: 5px solid green;
+      }
+      .box {
+        height: 7%;
+        width: 7%;
+        border: 5px solid green;
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main"></main>
+  </body>
+  <script>
+    const main = document.getElementById("main");
+
+    let p1 = performance.now();
+
+    // for (let i = 1; i <= 7; i++) {
+    //   let myDiv = document.createElement("div");
+    //   myDiv.classList.add("box");
+    //   main.appendChild(myDiv);
+    // }
+
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 1; i <= 8; i++) {
+      let myDiv = document.createElement("div");
+      myDiv.classList.add("box");
+      fragment.append(myDiv);
+    }
+
+    main.append(fragment);
+
+    let p2 = performance.now();
+    console.log(p2 - p1);
+  </script>
+</html>

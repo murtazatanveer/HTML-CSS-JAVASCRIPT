@@ -27,3 +27,32 @@
 6. element.matches(): Checks if an element matches a specified CSS selector, useful for conditional styling logic.
 
 7. scrollIntoView() / scrollBy() / scrollTo(): Methods to programmatically control an element's position within the viewport or the scroll position of the window.
+
+=> What is Event, Event Target, Event Listener
+
+=> Phases of event (Capturing and Bubbling(default value of event listner))
+
+=> Event Object , Default Behaviour
+
+=> Reflow(changes the layout) , Repaint(same layout, new look) and Document Fragment.
+
+=> Synchronous Code vs Asynchronous Code , Event Loop , Callback Stack and queue
+
+Explanation :
+
+console.log("Start");
+setTimeout(() => console.log("Async Done"), 1000); // Non-blocking
+console.log("End");
+// Output order:
+// "Start" → "End" → (1 second later) "Async Done
+(in this code start goes to stack and then displays (Synchronous code) then counter setTimout (Asynchronous code) goes to stack then stack moves it to the browser and its timer starts , then end goes to stack and then displays (Synchronous code), after the timer ends setTimeout goes to queue and waits for the empty stack if the stack is empty event loop sent it to the stack and displays Asyn Done)
+
+Note : Timer starts immediately when setTimeout() is handed off to the browser's Web APIs.
+
+[Start]
+
+1. Execute all synchronous code
+2. Empty the ENTIRE microtask queue
+3. Execute ONE macrotask
+4. Repeat from step 2
+   [End]

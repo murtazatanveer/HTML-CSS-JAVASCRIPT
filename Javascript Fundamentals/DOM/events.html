@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+    <style>
+      button {
+        background-color: black;
+        color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <button id="addHello">CLICK TO DISPLAY HELLO</button>
+      <button id="removeHello">CLICK TO REMOVE HELLO</button>
+    </main>
+    <script>
+      const addHello = document.getElementById("addHello");
+      const removeHello = document.getElementById("removeHello");
+      let newElement = null;
+
+      function displayHello(event) {
+        console.log(event.type);
+        console.log(event.target);
+        console.log(event.target.style);
+        // event.target.style = "color:red";
+        newElement = document.createElement("h3");
+        newElement.id = "hello";
+        newElement.innerText = "HELLO WORLD";
+        document.getElementById("main").appendChild(newElement);
+
+        newElement.addEventListener("mouseover", hoverHello);
+        newElement.addEventListener("mouseleave", leftHello);
+      }
+
+      function hideHello(event) {
+        console.log(event.type);
+        console.log(event.target);
+        newElement = document.getElementById("hello");
+        if (newElement) {
+          newElement.remove();
+        }
+      }
+
+      function hoverHello(event) {
+        console.log(event.type);
+        console.log(event.target);
+        if (newElement) {
+          newElement.style.color = "blue";
+        }
+      }
+
+      function leftHello(event) {
+        console.log(event.type);
+        console.log(event.target);
+        if (newElement) {
+          newElement.style.color = "red";
+        }
+      }
+
+      addHello.addEventListener("click", displayHello);
+      removeHello.addEventListener("click", hideHello);
+
+      console.log(newElement);
+    </script>
+  </body>
+</html>

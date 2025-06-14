@@ -99,7 +99,9 @@ console.log(box1Parent);
 
 // box[0].remove();
 
-// const lbChilds = lb.querySelectorAll("*");
+// let lbChilds = lb.querySelectorAll("*");
+
+// lbChilds[0].style.display = "none";
 
 // lbChilds=lb.children;
 
@@ -148,3 +150,9 @@ console.log(box1Parent);
 //console.log(firstDiv.style.getPropertyValue("background"));
 
 lb.classList.add("box", "box1");
+
+box[0].addEventListener("click", displayBoxes);
+
+function displayBoxes(e) {
+  alert("Clicked On " + e.target.textContent);
+}

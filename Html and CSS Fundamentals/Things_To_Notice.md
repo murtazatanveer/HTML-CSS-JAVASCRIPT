@@ -66,7 +66,7 @@ letter-spacing,text-align,text-transform,color,text-indent)
 
 => 3D Transforms and Rotating Card on its center 180 degrees.
 
-=>CSS Media Queries
+=> SS Media Queries and Responsive Page
 
 ===============Tailwind CSS================
 

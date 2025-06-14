@@ -19,6 +19,9 @@
         width: 20%;
         height: 1cm;
         border: 3px solid wheat;
+      }
+
+      .move {
         animation-name: boxMovement;
         animation-delay: 0ms;
         animation-direction: alternate;
@@ -41,11 +44,50 @@
           margin-left: 80%;
         }
       }
+
+      #buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        margin: 10% auto;
+        width: 50%;
+        height: 1cm;
+      }
+
+      button {
+        background-color: rgb(55, 142, 55);
+        color: wheat;
+        font-weight: bolder;
+        width: 30%;
+        border-radius: 20%;
+        border: 1px solid wheat;
+        cursor: pointer;
+      }
+      button:hover {
+        transform: scale(1.1);
+        transition: 0.2s linear;
+      }
     </style>
   </head>
   <body>
     <main>
       <div id="box"></div>
+
+      <div id="buttons">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+      </div>
     </main>
+    <script>
+      const box = document.getElementById("box");
+
+      document.getElementById("start").addEventListener("click", () => {
+        box.classList.add("move");
+      });
+      document.getElementById("stop").addEventListener("click", () => {
+        box.classList.remove("move");
+      });
+    </script>
   </body>
 </html>
