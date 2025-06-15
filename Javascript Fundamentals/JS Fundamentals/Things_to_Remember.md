@@ -39,3 +39,5 @@
 => Error Handling in JS.
 
 => Concept of Window Object.
+
+=> Promise in JS.

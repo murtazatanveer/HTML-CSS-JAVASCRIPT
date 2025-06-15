@@ -36,15 +36,15 @@
 
 => Reflow(changes the layout) , Repaint(same layout, new look) and Document Fragment.
 
-=> Synchronous Code vs Asynchronous Code , Event Loop , Callback Stack and queue
+=> Synchronous Code vs Asynchronous Code , Event Loop , Callback Stack and queue , Concept of Blocking , Single-Threaded vs. Multi-Threaded
 
 Explanation :
 
 console.log("Start");
-setTimeout(() => console.log("Async Done"), 1000); // Non-blocking
+setTimeout(() => console.log("Async Done"), 5000); // Non-blocking
 console.log("End");
 // Output order:
-// "Start" → "End" → (1 second later) "Async Done
+// "Start" → "End" → (5 second later) "Async Done
 (in this code start goes to stack and then displays (Synchronous code) then counter setTimout (Asynchronous code) goes to stack then stack moves it to the browser and its timer starts , then end goes to stack and then displays (Synchronous code), after the timer ends setTimeout goes to queue and waits for the empty stack if the stack is empty event loop sent it to the stack and displays Asyn Done)
 
 Note : Timer starts immediately when setTimeout() is handed off to the browser's Web APIs.

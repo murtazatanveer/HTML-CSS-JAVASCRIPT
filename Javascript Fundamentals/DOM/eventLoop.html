@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Changer</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vh;
+      }
+      main {
+        border: 3px solid green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15%;
+        height: 20%;
+        margin-top: 30%;
+      }
+      div {
+        border: 3px solid rebeccapurple;
+        height: 50%;
+        width: 10%;
+        border-radius: 50%;
+        border: 10px solid red;
+      }
+      h3 {
+        color: red;
+      }
+      button {
+        background-color: gray;
+        color: white;
+        font-weight: bolder;
+      }
+      button:hover {
+        transform: scale(1.1);
+        transition: all 0.3s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <div id="circle"></div>
+      <h3 id="text">RED</h3>
+    </main>
+    <script>
+      const start = document.getElementById("start");
+      const stop = document.getElementById("stop");
+      const text = document.getElementById("text");
+      const div = document.getElementById("circle");
+
+      start.addEventListener("click", greenColor);
+      stop.addEventListener("click", stopChanges);
+
+      let timer = null;
+
+      function greenColor() {
+        if (text.innerText != "GREEN") {
+          timer = setTimeout(() => {
+            div.style.borderColor = "green";
+            text.innerText = "GREEN";
+            text.style.color = "green";
+          }, 2500);
+        }
+      }
+
+      function stopChanges() {
+        if (timer != null) {
+          clearTimeout(timer);
+        }
+      }
+    </script>
+  </body>
+</html>

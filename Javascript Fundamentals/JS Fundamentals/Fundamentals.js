@@ -1323,6 +1323,8 @@ if (true) {
   var v2 = 20; // Function-scoped (or global if in global scope)
   console.log(v2); // 20
 }
+evening();
+
 console.log(v2); // 20 - accessible outside the block due to var's function-scoping
 
 const ob = {
@@ -1407,3 +1409,105 @@ var obj = {
 
 window.obj.f1();
 window.obj.f2();
+
+//Promisis In JS.
+
+// setTimeout(() => {
+//   console.log("____LAST____");
+// }, 8000);
+
+// const p = new Promise((resolve, reject) => {
+//   let flag = true;
+
+//   if (flag) {
+//     setTimeout(() => {
+//       resolve("Promise Resolved. Data Fetched");
+//     }, 5000);
+//   } else {
+//     reject(new Error("Promise Rejected. Data Loss"));
+//   }
+// });
+
+// p.then((result) => {
+//   console.log(result);
+//   return "Data is Updated";
+// })
+//   .then((data) => {
+//     setTimeout(() => {
+//       console.log(data);
+//     }, 2000);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+//   .finally(() => {
+//     console.log("This Block Executes whether promise is resolve or rejected");
+//   });
+
+// console.log("Execute Before Promise");
+
+// function fetchData(url) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       // Simulate network request
+//       if (url === "/data") {
+//         resolve({ id: 1, name: "Alice" });
+//       } else {
+//         reject(new Error("Resource not found: " + url));
+//       }
+//     }, 6000);
+//   });
+// }
+
+// function processData(data) {
+//   console.log("Processing:", data);
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({ ...data, status: "processed" });
+//     }, 3000);
+//   });
+// }
+
+// fetchData("/data") // Returns a Promise
+//   .then((userData) => {
+//     // When fetchData resolves, userData is passed here
+//     console.log("Fetched user:", userData);
+//     return processData(userData); // Returns a new Promise, next .then() waits for this
+//   })
+//   .then((finalData) => {
+//     // When processData resolves, finalData is passed here
+//     console.log("Final result:", finalData);
+//     // You can even throw an error here to skip to the catch block
+//     // throw new Error('Something went wrong after processing!');
+//   })
+//   .catch((error) => {
+//     // Catches any rejection in the chain
+//     console.error("An error occurred:", error.message);
+//   })
+//   .finally(() => {
+//     console.log("Operation complete.");
+//   });
+
+// // Example of a rejected chain
+// fetchData("/non-existent-data")
+//   .then((data) => console.log("This will not run for error:", data))
+//   .catch((error) => console.error("Caught specific error:", error.message))
+//   .finally(() => console.log("Error path complete."));
+
+// let promise1 = new Promise((resolve, reject) => {
+//   setTimeout(reject, 1000, "First");
+// });
+// let promise2 = new Promise((resolve, reject) => {
+//   setTimeout(reject, 2000, "Second");
+// });
+// let promise3 = new Promise((resolve, reject) => {
+//   setTimeout(reject, 4000, "Third");
+// });
+
+// Promise.all([promise1, promise2, promise3])
+//   .then((values) => {
+//     console.log("All Resolved : " + values);
+//   })
+//   .catch((error) => {
+//     console.error("error:" + error);
+//   });
