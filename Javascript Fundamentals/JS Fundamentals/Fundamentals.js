@@ -1511,3 +1511,91 @@ window.obj.f2();
 //   .catch((error) => {
 //     console.error("error:" + error);
 //   });
+
+// async function getData() {
+//   setTimeout(function () {
+//     console.log("I am inside set Timeout block");
+//   }, 3000);
+// }
+
+// let output = getData();
+
+// console.log(output);
+
+// async function myAsynFunc() {
+//   return Math.random() > 0.5
+//     ? new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//           resolve("Hello World");
+//         }, 2000);
+//       })
+//     : Promise.reject(new Error("False Condition"));
+// }
+
+// async function asynFunc() {
+//   console.log("Start");
+
+//   await myAsynFunc()
+//     .then((message) => {
+//       console.log(message);
+//     })
+//     .catch((error) => {
+//       console.log(error.message);
+//     });
+
+//   console.log("end");
+// }
+
+// asynFunc();
+
+// console.log("Prints after Start");
+
+// function getPromis() {
+//   return new Promise((resolve, reject) => {
+//     let flag = true;
+
+//     if (flag) {
+//       resolve("Promise Resolved. Data Fetched");
+//     } else {
+//       reject(new Error("Promise Rejected. Data Loss"));
+//     }
+//   });
+// }
+
+// async function myAsynFunc2() {
+//   console.log("____START___");
+
+//   await getPromis()
+//     .then((result) => {
+//       console.log(result);
+//       return "Data is Updated";
+//     })
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     })
+//     .finally(() => {
+//       console.log("This Block Executes whether promise is resolve or rejected");
+//     });
+
+//   console.log("___End___");
+// }
+
+// myAsynFunc2();
+
+// console.log("After Start");
+
+// async function myAsynFunc3() {
+//   console.log("----start----");
+
+//   let p = await new Promise((resolve, reject) => {
+//     setTimeout(resolve, 2000, "Timeout inside Promise");
+//   }).then((message) => {
+//     console.log(message);
+//   });
+//   console.log("----End----");
+// }
+
+// myAsynFunc3();
