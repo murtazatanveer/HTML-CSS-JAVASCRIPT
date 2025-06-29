@@ -23,14 +23,45 @@
       .bgColor {
         background-color: #121212;
       }
-      .lib > article > nav {
-        min-height: 0;
+
+      #songsList,
+      #playLists {
+        scrollbar-width: thin;
+        scrollbar-color: #494949 transparent;
+      }
+
+      .aside {
+        display: flex;
+        position: absolute;
+        z-index: 10;
+        top: 11.6%;
+        width: 8.8cm;
+        left: 0;
+        background-color: black;
+        height: 92.3%;
+        animation: movingAsideRight 0.7s linear none 1 normal;
+      }
+      .dimensions {
+        width: 26%;
+        height: 100%;
+      }
+
+      @keyframes movingAsideRight {
+        0% {
+          left: -33.3%;
+        }
+        100% {
+          left: 0;
+        }
       }
     </style>
   </head>
-  <body class="h-screen w-screen bg-black flex flex-row justify-center">
+  <body
+    class="h-[110vh] w-screen bg-black flex flex-row lg:justify-between justify-center"
+  >
     <aside
-      class="flex flex-col gap-[1.5%] items-center justify-center h-full w-[26%]"
+      class="lg:flex flex-col gap-[1.5%] items-center justify-center rounded-[15px] dimensions hidden"
+      id="aside"
     >
       <div
         class="home bgColor rounded-[4%] w-[96%] h-[21%] flex flex-col justify-center gap-[10%]"
@@ -60,12 +91,9 @@
             alt="plus"
           />
         </header>
-        <article
-          class="h-[68%] flex flex-col justify-center gap-[3%] overflow-y-auto"
-          id="songsList"
-        >
+        <article class="h-[68%] overflow-y-auto" id="songsList">
           <nav
-            class="flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
+            class="mb-[5%] flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
           >
             <div class="flex items-center justify-center gap-[8px] ml-[2%]">
               <img
@@ -86,7 +114,7 @@
             </div>
           </nav>
           <nav
-            class="flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
+            class="mb-[5%] flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
           >
             <div class="flex items-center justify-center gap-[8px] ml-[2%]">
               <img
@@ -107,7 +135,7 @@
             </div>
           </nav>
           <nav
-            class="flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
+            class="mb-[5%] flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
           >
             <div class="flex items-center justify-center gap-[8px] ml-[2%]">
               <img
@@ -128,7 +156,7 @@
             </div>
           </nav>
           <nav
-            class="flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
+            class="mb-[5%] flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
           >
             <div class="flex items-center justify-center gap-[8px] ml-[2%]">
               <img
@@ -149,7 +177,7 @@
             </div>
           </nav>
           <nav
-            class="flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
+            class="mb-[5%] flex items-center justify-between border-[1.5px] border-[#424242] rounded-[4px] h-[17%]"
           >
             <div class="flex items-center justify-center gap-[8px] ml-[2%]">
               <img
@@ -191,13 +219,20 @@
         </footer>
       </div>
     </aside>
-    <main class="h-full w-[74%]">
+    <main class="h-full lg:w-[74%] w-full relative" id="mainBox">
       <header
-        class="flex items-center justify-between mt-[0.8%] bg-[#181717b5] h-[9%]"
+        class="flex items-center justify-between mt-[0.8%] bg-[#181717b5] h-[9%] rounded-[10px]"
       >
-        <div class="arrows flex gap-[27%] ml-[2.5%]">
+        <div class="arrows flex gap-[27%] ml-[2.5%] w-auto">
           <img
-            class="w-[25px] rounded-[40%] cursor-pointer"
+            class="w-[20px] ml-[10px] lg:hidden"
+            src="burger.png"
+            alt="Ham Burger"
+            id="hamBurger"
+          />
+
+          <img
+            class="w-[25px] rounded-[40%] cursor-pointer ml-[10px]"
             src="arrow-left-3099.png"
             alt="left"
           />
@@ -208,7 +243,7 @@
           />
         </div>
         <div
-          class="buttons h-full flex items-center justify-center gap-[25px] mr-[2%]"
+          class="buttons h-full flex items-center justify-center gap-[25px] lg:mr-[2%] md:mr-[3%] sm:mr-[4%] mr-[5%]"
         >
           <button
             class="text-gray-300 font-bold text-[13px] hover:text-white transition-all duration-[0.3s] ease-linear hover:your-effect"
@@ -217,18 +252,21 @@
           </button>
 
           <button
-            class="bg-white text-black text-[13px] font-bold rounded-[20px] h-[75%] w-[2.3cm] hover:scale-[1.05] transition-all duration-[0.3s] ease-linear hover:your-effect"
+            class="bg-white text-black text-[13px] font-bold rounded-[20px] h-[1cm] w-[2.3cm] hover:scale-[1.05] transition-all duration-[0.3s] ease-linear hover:your-effect"
           >
             Log in
           </button>
         </div>
       </header>
-      <section class="bgColor mt-[0.5%] h-[88%]">
+      <section class="bgColor mt-[0.5%] sm:h-[80%] h-[90%] rounded-[10px]">
         <h1 class="font-bold pl-[2%] mt-[1%]">Spotify Playlists</h1>
 
-        <main class="h-auto flex mt-[3%] items-center justify-evenly flex-wrap">
+        <main
+          class="flex items-center justify-evenly flex-wrap overflow-y-auto max-h-[95%]"
+          id="playLists"
+        >
           <div
-            class="h-[5.65cm] w-[17%] mt-[23px] flex flex-col items-center justify-center gap-[4.5%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[4.5%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
           >
             <img
               class="h-[3.5cm] rounded-[7px]"
@@ -240,7 +278,7 @@
             </p>
           </div>
           <div
-            class="h-[5.65cm] w-[17%] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
           >
             <img
               class="h-[3.5cm] rounded-[7px]"
@@ -253,7 +291,7 @@
             </p>
           </div>
           <div
-            class="h-[5.65cm] w-[17%] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
           >
             <img
               class="h-[3.5cm] rounded-[7px]"
@@ -267,7 +305,7 @@
           </div>
 
           <div
-            class="h-[5.65cm] w-[17%] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
           >
             <img
               class="h-[3.5cm] rounded-[7px]"
@@ -281,7 +319,46 @@
           </div>
 
           <div
-            class="h-[5.65cm] w-[17%] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+          >
+            <img
+              class="h-[3.5cm] rounded-[7px]"
+              src=" https://i.scdn.co/image/ab67706f00000002d3d67a050ae0e4da1478fff2"
+              alt="hello"
+            />
+
+            <p class="text-gray-400 w-[3.5cm] text-[14px]">
+              Soothing drones, ambient and...
+            </p>
+          </div>
+          <div
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+          >
+            <img
+              class="h-[3.5cm] rounded-[7px]"
+              src=" https://i.scdn.co/image/ab67706f00000002d3d67a050ae0e4da1478fff2"
+              alt="hello"
+            />
+
+            <p class="text-gray-400 w-[3.5cm] text-[14px]">
+              Soothing drones, ambient and...
+            </p>
+          </div>
+          <div
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
+          >
+            <img
+              class="h-[3.5cm] rounded-[7px]"
+              src=" https://i.scdn.co/image/ab67706f00000002d3d67a050ae0e4da1478fff2"
+              alt="hello"
+            />
+
+            <p class="text-gray-400 w-[3.5cm] text-[14px]">
+              Soothing drones, ambient and...
+            </p>
+          </div>
+          <div
+            class="h-[5.65cm] w-[4.2cm] mt-[23px] flex flex-col items-center justify-center gap-[6%] cursor-pointer hover:bg-[#2b2b2b] rounded-[5%]"
           >
             <img
               class="h-[3.5cm] rounded-[7px]"
@@ -294,40 +371,43 @@
             </p>
           </div>
         </main>
-
-        <footer
-          class="bg-[#2c2c2c] flex items-center h-[10%] mt-[20%] rounded-[10px]"
-        >
-          <img
-            src=""
-            alt="logo"
-            id="currSongLogo"
-            class="w-[40px] ml-[2%] rounded-[13px]"
-          />
-
-          <p class="ml-[1.5%] w-[20%]" id="currSong"></p>
-          <div class="flex gap-[20px] ml-[15%]">
-            <img
-              class="w-[30px] cursor-pointer hover:scale-[1.1] transition-all duration-[0.3s] ease-linear hover:your-effect"
-              src="prev.png"
-              alt="prev"
-              id="prev"
-            />
-            <img
-              class="w-[35px] cursor-pointer hover:scale-[1.1] transition-all duration-[0.3s] ease-linear hover:your-effect"
-              src="play.png"
-              id="pausePlay"
-              alt="play"
-            />
-            <img
-              class="w-[30px] cursor-pointer hover:scale-[1.1] transition-all duration-[0.3s] ease-linear hover:your-effect"
-              src="next.png"
-              alt="next"
-              id="next"
-            />
-          </div>
-        </footer>
       </section>
+      <footer
+        class="bg-[#2c2c2c] flex items-center sm:h-[8%] h-[12%] rounded-[10px] w-full absolute sm:bottom-0 bottom-[7%]"
+        id="playBox"
+      >
+        <img
+          src=""
+          alt="logo"
+          id="currSongLogo"
+          class="w-[40px] ml-[2%] rounded-[13px]"
+          style="display: none"
+        />
+
+        <p class="sm:ml-[1.5%] ml-[2.5%] sm:w-[20%] w-[30%]" id="currSong"></p>
+        <div class="flex gap-[20px] sm:ml-[22%] ml-[3%]" id="prevPauseNext">
+          <img
+            class="w-[30px] cursor-pointer hover:scale-[1.1] transition-all duration-[0.3s] ease-linear hover:your-effect"
+            src="prev.png"
+            alt="prev"
+            id="prev"
+            data-index="prev"
+          />
+          <img
+            class="w-[35px] cursor-pointer hover:scale-[1.1] transition-all duration-[0.3s] ease-linear hover:your-effect"
+            src="play.png"
+            alt="play"
+            id="pausePlay"
+          />
+          <img
+            class="w-[30px] cursor-pointer hover:scale-[1.1] transition-all duration-[0.3s] ease-linear hover:your-effect"
+            src="next.png"
+            alt="next"
+            id="next"
+            data-index="next"
+          />
+        </div>
+      </footer>
     </main>
     <script src="index.js"></script>
   </body>

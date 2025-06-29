@@ -12,33 +12,90 @@ const musicName = document.getElementById("currSong");
 const pausePlay = document.getElementById("pausePlay");
 const allSongsName = document.getElementsByClassName("songName");
 const allSongsButtons = document.getElementsByClassName("song");
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
+const playBox = document.getElementById("playBox");
+const prevPauseNext = document.getElementById("prevPauseNext");
+
+const hamBurger = document.getElementById("hamBurger");
+const aside = document.getElementById("aside");
 
 songsList.addEventListener("click", stopAndStart);
 pausePlay.addEventListener("click", stopAndStart_2);
-next.addEventListener("click", nextMusic);
-prev.addEventListener("click", prevMusic);
+document.addEventListener("keydown", stopAndStart_2);
 
 let currentAudio = null;
 let currentPlayingIndex = null;
+let currentPlayingSong = null;
 
 musicLogo.style.display = "none";
 
-function nextMusic() {
-  if (!currentAudio || !currentPlayingIndex || currentPlayingIndex == 4) return;
+playBox.addEventListener("click", nextAndPrevMusic);
+hamBurger.addEventListener("click", displayAside);
 
-  currentAudio.pause();
-  console.log(currentPlayingIndex);
+window.addEventListener("resize", () => {
+  const screenSize = window.innerWidth;
+  console.log(screenSize);
 
-  currentPlayingIndex++;
-  console.log(currentPlayingIndex);
+  if (screenSize >= 1024 && !aside.classList.contains("hidden")) {
+    aside.classList.add("hidden", "dimensions");
+    aside.classList.remove("aside");
+  }
 
-  currentAudio = new Audio(songsPath[currentPlayingIndex]);
-  currentAudio.play();
+  if (screenSize < 640) {
+    prevPauseNext.style.removeProperty("marginLeft");
+  }
+});
+
+function displayAside() {
+  if (aside.classList.contains("hidden")) {
+    aside.classList.remove("hidden", "dimensions");
+    aside.classList.add("aside");
+  } else {
+    aside.classList.add("hidden", "dimensions");
+    aside.classList.remove("aside");
+  }
 }
 
-function prevMusic() {}
+function nextAndPrevMusic(event) {
+  const element = event.target;
+  const nextPrevDataset = element.dataset.index;
+
+  if (
+    (nextPrevDataset === "next" || nextPrevDataset === "prev") &&
+    (currentAudio || currentPlayingIndex || currentPlayingSong)
+  ) {
+    currentAudio.pause();
+    pausePlay.src = "pause.png";
+
+    currentPlayingSong.style.border = "";
+    let secondDiv = currentPlayingSong.children[1];
+    let img = secondDiv.children[1];
+    img.src = "play.png";
+
+    if (nextPrevDataset === "next") {
+      currentPlayingIndex =
+        currentPlayingIndex === 4 ? 0 : ++currentPlayingIndex;
+    } else {
+      currentPlayingIndex =
+        currentPlayingIndex === 0 ? 4 : --currentPlayingIndex;
+      console.log(currentPlayingIndex);
+    }
+
+    currentPlayingSong = songsList.children[currentPlayingIndex];
+    secondDiv = currentPlayingSong.children[1];
+    img = secondDiv.children[1];
+    img.src = "pause.png";
+
+    let firstDiv = currentPlayingSong.children[0];
+    let imgSource = firstDiv.children[0];
+    musicLogo.src = imgSource.src;
+
+    currentPlayingSong.style.border = "4px solid #807e7e";
+
+    currentAudio = new Audio(songsPath[currentPlayingIndex]);
+    currentAudio.play();
+    musicName.innerText = allSongsName[currentPlayingIndex].innerText;
+  }
+}
 
 function stopAndStart_2() {
   if (!currentAudio) return;
@@ -58,6 +115,7 @@ function stopAndStart(e) {
   const img = e.target;
   if (!img.dataset.index) return;
 
+  let prevSongPlay = currentPlayingIndex;
   musicLogo.style.display = "";
   const index = Number(img.dataset.index);
 
@@ -100,4 +158,12 @@ function stopAndStart(e) {
       currentPlayingIndex = null;
     };
   }
+  if (prevSongPlay != null && prevSongPlay != currentPlayingIndex) {
+    songsList.children[prevSongPlay].style.border = "";
+  }
+  currentPlayingSong = songsList.children[currentPlayingIndex];
+
+  currentPlayingSong.style.border = "4px solid #807e7e";
+
+  prevPauseNext.style.marginLeft = "15%";
 }
