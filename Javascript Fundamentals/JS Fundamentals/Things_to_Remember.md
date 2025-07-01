@@ -43,3 +43,5 @@
 => Promise in JS.
 
 => async/await in JS.
+
+=> Fetch API in JS.
