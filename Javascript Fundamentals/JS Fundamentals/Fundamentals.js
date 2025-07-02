@@ -1623,19 +1623,19 @@
 // Fetch API in JS.
 
 async function fetchApiGetRequest() {
-  try {
-    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+  // try {
+  //   let res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    if (!res.ok) {
-      throw new Error(`Error Accured due to ${response.status}`);
-    }
+  //   if (!res.ok) {
+  //     throw new Error(`Error Accured due to ${response.status}`);
+  //   }
 
-    let data = await res.json();
-    console.log(data);
-    console.log("Fetch API executed without any Error");
-  } catch (error) {
-    console.log("There was a problem with the fetch operation : ", error);
-  }
+  //   let data = await res.json();
+  //   console.log(data);
+  //   console.log("Fetch API executed without any Error");
+  // } catch (error) {
+  //   console.log("There was a problem with the fetch operation : ", error);
+  // }
 
   // The above code is same as
 
@@ -1654,30 +1654,80 @@ async function fetchApiGetRequest() {
 
 // fetchApiGetRequest();
 
-async function fetchApiPostRequest() {
-  const user = {
-    name: "Murtaza",
-    age: 22,
-    email: "murtaza.tanveer488@gmail.com",
-  };
+// async function fetchApiPostRequest() {
+//   const user = {
+//     name: "Murtaza",
+//     age: 22,
+//     email: "murtaza.tanveer488@gmail.com",
+//   };
+//   try {
+//     let response = await fetch("https://jsonplaceholder.typicode.com/users", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json", // Tell the server we're sending JSON
+//       },
+//       body: JSON.stringify(user),
+//     });
+
+//     if (!response.ok) {
+//       throw new Error(`Error Accured due to ${response.status}`);
+//     }
+//     console.log("Successfully Posted Data");
+//     console.log(await response.json());
+//   } catch (err) {
+//     console.log("There was a problem with the post operation : ", err);
+//   }
+
+//   await fetchApiGetRequest();
+// }
+
+// fetchApiPostRequest();
+
+// async function fetchApiPutRequest() {
+//   const user = {
+//     name: "Murtaza",
+//     age: 22,
+//     email: "murtaza.tanveer488@gmail.com",
+//   };
+
+//   try {
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users/2", {
+//       method: "PUT",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(user),
+//     });
+
+//     if (!res.ok) {
+//       throw new Error("Error Accured while Updating Data " + res.status);
+//     }
+//     console.log("Data Successfully Updated");
+//     console.log(await res.json());
+//   } catch (err) {
+//     console.log(err);
+//   }
+
+//   await fetchApiGetRequest();
+//   console.log("end");
+// }
+
+// fetchApiPutRequest();
+
+async function fetchApiDeleteRequest() {
   try {
-    let response = await fetch("https://jsonplaceholder.typicode.com/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json", // Tell the server we're sending JSON
-      },
-      body: JSON.stringify(user),
+    let res = await fetch("https://jsonplaceholder.typicode.com/users/1", {
+      method: "DELETE",
     });
 
-    if (!response.ok) {
-      throw new Error(`Error Accured due to ${response.status}`);
+    if (!res.ok) {
+      throw new Error("Failed to Delete User " + res.status);
     }
-    console.log("Successfully Posted Data");
-  } catch (err) {
-    console.log("There was a problem with the post operation : ", err);
+    console.log("User Deleted");
+    console.log(await res.json());
+  } catch (error) {
+    console.log(error);
   }
-
-  await fetchApiGetRequest();
 }
 
-fetchApiPostRequest();
+fetchApiDeleteRequest();
