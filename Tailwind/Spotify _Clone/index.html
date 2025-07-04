@@ -48,10 +48,14 @@
 
       @keyframes movingAsideRight {
         0% {
+          filter: blur(2px);
+          opacity: 0.3;
           left: -33.3%;
         }
         100% {
           left: 0;
+          filter: blur(0px);
+          opacity: 1;
         }
       }
     </style>

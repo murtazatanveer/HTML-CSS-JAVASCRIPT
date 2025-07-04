@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singly Linked List UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --left: 0%;
+      }
+
+      .boxAnimation {
+        animation: animate 2s ease-in none 1 normal;
+      }
+
+      @keyframes animate {
+        0% {
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-color: transparent;
+          background-color: rgb(99, 175, 78);
+          border-radius: 40px;
+        }
+        100% {
+          top: 37%;
+          left: var(--left);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 h-screen w-screen">
+    <header class="h-auto w-auto p-4 sm:p-6 lg:p-8">
+      <div class="flex flex-col h-full">
+        <h1
+          class="text-2xl sm:text-3xl font-bold text-gray-700 text-center mb-4"
+        >
+          Singly Linked List
+        </h1>
+
+        <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            class="bg-white border-2 border-gray-300 rounded-xl shadow-lg p-4 flex flex-col gap-3"
+          >
+            <h2 class="text-lg font-semibold text-gray-600 text-center">
+              Add Operations
+            </h2>
+
+            <div class="flex items-center gap-2">
+              <input
+                type="text"
+                placeholder="Value"
+                id="value"
+                class="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              />
+              <input
+                type="text"
+                placeholder="Index"
+                class="border border-gray-300 rounded-lg px-3 py-2 w-24 text-center focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              />
+              <button
+                class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 whitespace-nowrap w-full"
+              >
+                Add at Index
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+                id="addAtStart"
+              >
+                Add at Start
+              </button>
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+                id="addAtEnd"
+              >
+                Add at End
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white border-2 border-gray-300 rounded-xl shadow-lg p-4 flex flex-col gap-3"
+          >
+            <h2 class="text-lg font-semibold text-gray-600 text-center">
+              Remove Operations
+            </h2>
+
+            <div class="flex items-center gap-2">
+              <input
+                type="text"
+                placeholder="Index"
+                class="border border-gray-300 rounded-lg px-3 py-2 w-24 text-center focus:outline-none focus:ring-2 focus:ring-rose-400"
+              />
+              <button
+                class="bg-rose-500 text-white px-4 py-2 rounded-lg hover:bg-rose-600 whitespace-nowrap w-full"
+              >
+                Remove from Index
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <button
+                class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+              >
+                Remove from Start
+              </button>
+              <button
+                class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+              >
+                Remove from End
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      class="relative w-[95%] ml-[2.5%] h-[5cm] mt-[3%] overflow-y-auto"
+      id="section"
+    >
+      <main
+        class="w-[8%] h-[1.3cm] border-4 border-gray-600 absolute top-[37%] left-0 rounded-[30px] bg-sky-200"
+        id="node"
+      >
+        <div
+          class="flex flex-row items-center justify-center h-full w-[70%] border-r-4 border-gray-600 text-gray-900 font-semibold"
+        >
+          <p>Head</p>
+        </div>
+      </main>
+      <img
+        src="arrow.png"
+        alt="arrow"
+        class="w-[6%] h-[65px] absolute top-[33%] left-[6%] hidden"
+        id="arrow"
+      />
+    </section>
+    <script src="linkedList.js"></script>
+  </body>
+</html>
