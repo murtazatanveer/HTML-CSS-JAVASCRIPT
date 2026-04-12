@@ -30,7 +30,7 @@
 
 => Global , Function and block scoped concept.
 
-=> Temporal Dead Zone in JS.
+=> Temporal Dead Zone in JS. Variables declared with let and const are hoisted but remain uninitialized in the Temporal Dead Zone, so accessing them before initialization throws an error.
 
 => Math object (Math.abs(-5) , Math.floor(1.9) , Math.ceil(1.6) etc) and Date object.
 

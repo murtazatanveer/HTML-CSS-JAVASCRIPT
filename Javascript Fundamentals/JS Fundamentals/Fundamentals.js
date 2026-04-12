@@ -10,9 +10,18 @@
 // {
 //   age = 20;
 //   address = "jhelum";
-//   // a = address + age;
+//   a = address + age;
 // }
-// //console.log("\n",a,"\n");
+// console.log("\n", a, "\n");
+
+// if (true) {
+//   var z = 5;
+// }
+// console.log(z);
+
+// console.log(ab);
+// var ab = 99;
+
 // {
 //   console.log(
 //     "My Introduction\n",
@@ -23,7 +32,7 @@
 //     age,
 //     "\n",
 //     "Address : ",
-//     address
+//     address,
 //   );
 // }
 
@@ -45,16 +54,15 @@
 // var myVar = 10;
 // console.log(myVar); // Output: 10
 
-// //console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization
+// console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization
 // let myLet = 20;
 // console.log(myLet); // Output: 20
 
-// //console.log(myConst); // ReferenceError: Cannot access 'myConst' before initialization
+// console.log(myConst); // ReferenceError: Cannot access 'myConst' before initialization
 // const myConst = 30;
 // console.log(myConst); // Output: 30
 
-// // console.log(myLetFunc); // ReferenceError: Cannot access 'myLetFunc' before initialization
-// // myLetFunc();           // ReferenceError: Cannot access 'myLetFunc' before initialization
+// myLetFunc(); // ReferenceError: Cannot access 'myLetFunc' before initialization
 
 // let myLetFunc = function () {
 //   console.log("This is a function expression with let.");
@@ -175,7 +183,7 @@
 //   person.age,
 //   "\n",
 //   "Address",
-//   person.address
+//   person.address,
 // );
 
 // x.address.b();
@@ -220,7 +228,7 @@
 
 //   console.log("Vehicle Details : " + vehicle);
 //   console.log(typeof vehicle.owner);
-//   console.log("Address: " + vehicle.owner);
+//   console.log("Address: " + vehicle.owner.address);
 // }
 
 // let x_ = 10 + 9 - 13 + 17 * 2;
@@ -245,11 +253,11 @@
 //   console.log("hello");
 // }
 
-// // // Using prompt to get input from the user
-// // let userInput = prompt("Enter something:");
+// // Using prompt to get input from the user
+// let userInput = prompt("Enter something:");
 
-// // // Displaying the user input
-// // console.log("User input:", userInput);
+// // Displaying the user input
+// console.log("User input:", userInput);
 
 // // // Using prompt to get input from the user
 // // let Input = prompt("Enter : ");
@@ -373,8 +381,8 @@
 // }
 
 // {
-//   let a = true == 1;
-//   console.log(a);
+// let a = true == 1;
+// console.log(a);
 //   console.log(!true === false);
 // }
 
@@ -447,7 +455,7 @@
 //   console.log(me);
 // }
 
-// // Type Conversion
+// Type Conversion
 
 // {
 //   let num_1 = 10;
@@ -483,9 +491,9 @@
 //   console.log(Number(NaN)); // NaN
 // }
 
-// // Truthy and Falsy Values
+// Truthy and Falsy Values
 
-// {
+// {s
 //   // 5 Falsy values are 0 , undefined , null , "" (empty string) and NaN
 
 //   console.log(Boolean(0));
@@ -541,87 +549,90 @@
 
 // // For loops
 
-// {
-//   const person = {
-//     name: "xyz",
-//     age: 50,
-//     city: "lahore",
-//     Hobby: "Programmer",
-//   };
+// const person = {
+//   name: "xyz",
+//   age: 50,
+//   city: "lahore",
+//   Hobby: "Programmer",
+// };
 
-//   console.log(person["age"]);
+// console.log(person["age"]);
 
-//   for (let key in person) {
-//     console.log(`${key} : ${person[key]}`);
-//   }
+// for (let key in person) {
+//   console.log(`${key} : ${person[key]}`);
+// }
 
-//   for (let values of Object.values(person)) {
-//     console.log(values);
-//   }
+// for (let values of Object.values(person)) {
+//   console.log(values);
+// }
 
-//   for (let values of Object.entries(person)) {
-//     console.log(values);
-//   }
+// for (let values of Object.entries(person)) {
+//   console.log(values);
+// }
 
-//   // let arr = [1, 2, 3];
-//   // console.log(typeof [1, 2, 3]);
+// for (const value of "murtaza") {
+//   console.log(value);
+// }
 
-//   const bike = {
-//     company: "Honda",
+// let arr = [1, 2, 3];
+// console.log(typeof [1, 2, 3]);
 
-//     cc: 70,
+// const bike = {
+//   company: "Honda",
 
-//     owner: {
-//       name: "moon",
-//       age: 21,
-//     },
+//   cc: 70,
 
-//     colour: "Black",
-//   };
+//   owner: {
+//     name: "moon",
+//     age: 21,
+//   },
 
-//   let k;
+//   colour: "Black",
+// };
 
-//   let i = 1;
+// let k;
 
-//   for (k in bike) {
-//     if (i == 3) {
-//       let inner_key;
+// let i = 1;
 
-//       console.log(`${k} :\n`);
+// for (k in bike) {
+//   if (i == 3) {
+//     let inner_key;
 
-//       for (inner_key in bike.owner) {
-//         console.log(`     ${inner_key} : ${bike.owner[inner_key]}`);
-//       }
-//     } else {
-//       console.log(`${k} : ${bike[k]}`);
+//     console.log(`${k} :\n`);
+
+//     for (inner_key in bike.owner) {
+//       console.log(`${inner_key} : ${bike.owner[inner_key]}`);
 //     }
-
-//     i++;
+//   } else {
+//     console.log(`${k} : ${bike[k]}`);
 //   }
 
-//   let numbers = [10, 20, 30, 40];
+//   i++;
+// }
 
-//   for (let index in numbers) {
-//     console.log(`${index} : ${numbers[index]}`);
-//   }
+// let numbers = [10, 20, 30, 40];
 
-//   const university = {
-//     name: "Comsats",
-//     branch: "Abbottabad",
-//     is_private: true,
-//   };
+// for (let index in numbers) {
+//   console.log(`${index} : ${numbers[index]}`);
+// }
 
-//   const array = Object.keys(university);
+// const university = {
+//   name: "Comsats",
+//   branch: "Abbottabad",
+//   is_private: true,
+// };
 
-//   for (let key of array) {
-//     console.log(key);
-//   }
+// const array = Object.keys(university);
 
-//   const arr = Object.values(university);
+// for (let key of array) {
+//   console.log(key);
+// }
 
-//   for (let key in arr) {
-//     console.log(key + " : ", arr[key]);
-//   }
+// const arr = Object.values(university);
+
+// for (let key in arr) {
+//   console.log(key + " : ", arr[key]);
+// }
 // }
 
 // // /* Write a program to print the marks of student in an object "marks" using for loop*/
@@ -716,93 +727,91 @@
 // // Functions Expressions (Anonymous Functions)
 
 // {
-//   const add = function (num_1, num_2) {
-//     return num_1 + num_2;
-//   };
+// const add = function (num_1, num_2) {
+//   return num_1 + num_2;
+// };
 
-//   console.log(add(10, 20)); //Outputs : 30
+// console.log(add(10, 20)); //Outputs : 30
 
-//   console.log(typeof add); //Outputs : function
+// console.log(typeof add); //Outputs : function
 
-//   console.log(typeof add(10, 20)); //Outputs : number
+// console.log(typeof add(10, 20)); //Outputs : number
 
-//   let sub = function (a, b) {
+// let sub = function (a, b) {
+//   return a - b;
+// };
+
+// if (true) {
+//   function sub(a, b) {
 //     return a - b;
-//   };
-
-//   if (true) {
-//     function sub(a, b) {
-//       return a * b;
-//     }
-//     console.log("Subtraction : " + sub(10, 5));
 //   }
 //   console.log("Subtraction : " + sub(10, 5));
+// }
+// console.log("Subtraction : " + sub(10, 5));
 
-//   var v = 99;
-//   console.log(v);
-//   var v;
-//   console.log(v);
+// var v = 99;
+// console.log(v);
 
-//   const calculator = {
-//     add: function (num_1, num_2) {
-//       return num_1 + num_2;
-//     },
+// let age = 23;
 
-//     sub: function (num_1, num_2) {
-//       return num_1 - num_2;
-//     },
+// const calculator = {
+//   add: function (num_1, num_2) {
+//     return num_1 + num_2;
+//   },
 
-//     mul: function (num_1, num_2) {
-//       console.log("my age " + age);
-//       return num_1 * num_2;
-//     },
+//   sub: function (num_1, num_2) {
+//     return num_1 - num_2;
+//   },
 
-//     div: function (num_1, num_2) {
-//       return num_1 / num_2;
-//     },
-//   };
+//   mul: function (num_1, num_2) {
+//     console.log("my age " + age);
+//     return num_1 * num_2;
+//   },
 
-//   console.log(calculator.mul(99, 2)); // Outputs : 198
+//   div: function (num_1, num_2) {
+//     return num_1 / num_2;
+//   },
+// };
 
-//   const print_hello = function () {
-//     console.log("__ HELLO __");
-//   };
+// console.log(calculator.mul(99, 2)); // Outputs : 198
 
-//   print_hello(); // Outputs : HELLO
+// const print_hello = function () {
+//   console.log("__ HELLO __");
+// };
 
-//   function func() {
-//     console.log(arguments[0]); // Doesnot work in arrow functions.
-//     for (let i = 0; i < arguments.length; i++) {
-//       console.log(arguments[i]);
-//     }
+// print_hello(); // Outputs : HELLO
+
+// function func() {
+//   console.log(arguments[0]); // Doesnot work in arrow functions.
+//   for (let i = 0; i < arguments.length; i++) {
+//     console.log(arguments[i]);
 //   }
+// }
 
-//   func("Welcome to Javascript", 10, {
-//     name: "smurtaza",
-//     age: 22,
-//     isStudent: true,
-//   });
+// func("Welcome to Javascript", 10, {
+//   name: "smurtaza",
+//   age: 22,
+//   isStudent: true,
+// });
 
-//   function func2(a, b, ...remainingArgs) {
-//     console.log(a + " " + b);
-//     for (let i = 0; i < remainingArgs.length; i++) {
-//       console.log(remainingArgs[i]);
-//     }
-//     remainingArgs[3][2] = 99;
+// function func2(a, b, ...remainingArgs) {
+//   console.log(a + " " + b);
+//   for (let i = 0; i < remainingArgs.length; i++) {
+//     console.log(remainingArgs[i]);
 //   }
+//   remainingArgs[3][2] = 99;
+// }
 
-//   let arr = [1, 2, 3, 4, 5];
-//   console.log(arr);
-//   func2(10, 20, "I", "Like", "JS", arr);
-//   console.log(arr);
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr);
+// func2(10, 20, "I", "Like", "JS", arr);
+// console.log(arr);
 // }
 
 // // //Arrow Functions
 
 // {
-//   const add = (num_1, num_2) => {
-//     return num_1 + num_2;
-//   };
+//   const add = (num_1, num_2) => num_1 + num_2;
 
 //   console.log(add(10, 20)); // Outputs : 30
 
@@ -917,22 +926,19 @@
 //     return numbers;
 //   }
 //   console.log(numbers);
-//   const reversedNumbers = reverse_numbers([...numbers]);
-//   reverse_numbers(numbers);
-//   console.log(reversedNumbers);
-//   console.log(numbers);
+// const reversedNumbers = reverse_numbers([...numbers]);
+// reverse_numbers(numbers);
+// console.log(reversedNumbers);
+// console.log(numbers);
 // }
 
-// // /*{
-// //     let arr = new Array();
+// {
+//   let arr = new Array();
 
-// //     for(let i=0;i<5;i++){
-
-// //         arr[i] = Number(prompt(`Enter ${i+1} Number : `));
-
-// //     }
-
-// // }*/
+//   for (let i = 0; i < 5; i++) {
+//     arr[i] = Number(prompt(`Enter ${i + 1} Number : `));
+//   }
+// }
 
 // {
 //   const arr = [
@@ -950,69 +956,78 @@
 // // //Arrays Operations
 
 // {
-//   const evenNumbers = [4, 6, 8, 10];
+// const evenNumbers = [4, 6, 8, 10];
 
-//   // Add an element at the end of an array
+// // Add an element at the end of an array
 
-//   evenNumbers.push(12);
-//   console.log(evenNumbers);
+// evenNumbers.push(12);
+// console.log(evenNumbers);
 
-//   // Add an element at the start of an array
+// //   // Add an element at the start of an array
 
-//   evenNumbers.unshift(2);
-//   console.log(evenNumbers);
+// evenNumbers.unshift(2);
+// console.log(evenNumbers);
 
-//   // Remove an element from the end of an array
+// //   // Remove an element from the end of an array
 
-//   let elementToRemove = evenNumbers.pop();
-//   console.log(`Removed element from end is ${elementToRemove}`);
-//   console.log(evenNumbers);
+// let elementToRemove = evenNumbers.pop();
+// console.log(`Removed element from end is ${elementToRemove}`);
+// console.log(evenNumbers);
 
-//   // Remove an element from the start of an array
+// //   // Remove an element from the start of an array
 
-//   elementToRemove = evenNumbers.shift();
-//   console.log(`Removed element from start is ${elementToRemove}`);
-//   console.log(evenNumbers);
+// elementToRemove = evenNumbers.shift();
+// console.log(`Removed element from start is ${elementToRemove}`);
+// console.log(evenNumbers);
 
-//   // Checking that an element is present in an array
+// //   // Checking that an element is present in an array
 
-//   let IsElementExist = evenNumbers.includes(8);
+// let IsElementExist = evenNumbers.includes(8);
 
-//   console.log(IsElementExist);
+// console.log(IsElementExist);
 
-//   IsElementExist = evenNumbers.includes(12);
+// IsElementExist = evenNumbers.includes(12);
 
-//   console.log(IsElementExist);
+// console.log(IsElementExist);
 
-//   // Concatination of two arrays
+// //   // Concatination of two arrays
 
-//   const alphabets = ["a", "b", "c", "d", "e", "f", "g", "h"];
+// const alphabets = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
-//   const digits = [1, 2, 3, 4, 5];
+// const digits = [1, 2, 3, 4, 5];
 
-//   const digitsAndAlphabets = digits.concat(alphabets);
+// const digitsAndAlphabets = digits.concat(alphabets);
 
-//   console.log(digitsAndAlphabets);
+// console.log(digitsAndAlphabets);
 
-//   // Returns a shallow copy of a portion of an array into a new array.
+// //   // Returns a shallow copy of a portion of an array into a new array.
 
-//   const fewAlphabets = alphabets.slice(2, 6);
+// const fewAlphabets = alphabets.slice(2, 6);
 
-//   console.log(fewAlphabets);
+// console.log(fewAlphabets);
 
-//   // Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+// //   // Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 
-//   const x = 10;
+// const x = 10;
 
-//   alphabets.splice(1, 4, x);
+// alphabets.splice(1, 4, x);
 
-//   console.log(alphabets);
+// console.log(alphabets);
 
-//   // Reverse an array
+// //   // Reverse an array
 
-//   const oddNumbers = [1, 3, 5, 7, 9];
-//   const rev = oddNumbers.reverse();
-//   console.log(rev + "  " + oddNumbers);
+// const oddNumbers = [1, 3, 5, 7, 9];
+// const rev = oddNumbers.reverse();
+// console.log(rev + "  " + oddNumbers);
+
+// // // Returns the copy of an Array into new Array
+
+// primeNums = [1, 3, 5, 7, 11, 13, 17, 19, 23];
+// copyPrimeNums = [...primeNums];
+// copyPrimeNums.push(29);
+// console.log(copyPrimeNums);
+// console.log(primeNums);
+
 // }
 
 // // /*  Steven is still building his tip calculator, using the same rules as before: Tip 15% of
@@ -1058,25 +1073,47 @@
 
 // // // Object Methods
 
-// {
-//   const person = {
-//     name: "moon",
-//     birthYear: 2003,
-//     Loc: "Abbottabad",
+// // {
+// const person = {
+//   name: "moon",
+//   birthYear: 2003,
+//   Loc: "Abbottabad",
 
-//     age: function () {
-//       this.a = 2024 - this.birthYear;
-//       return this.a;
-//     },
+//   age: function () {
+//     this.a = 2024 - this.birthYear;
+//     return this.a;
+//   },
 
-//     education: {
-//       institutionName: "Comsats",
-//       isPass: true,
-//     },
-//   };
+//   education: {
+//     institutionName: "Comsats",
+//     isPass: true,
+//   },
+// };
 
-//   console.log(person.age());
-//   console.log(person.a);
+// console.log(person.age());
+// console.log(person.a);
+
+// const ob = {
+//   a: function () {
+//     this.name = "abc";
+//   },
+
+//   b: () => {
+//     this.lan = "js";
+//   },
+//   p: function () {
+//     console.log(this);
+//   },
+// };
+
+// ob.a();
+
+// console.log(ob.name);
+// ob.b();
+// console.log(window.lan);
+
+// console.log(this);
+// ob.p();
 
 //   /*Coding Challenge :
 
@@ -1133,7 +1170,7 @@
 //   calculateBMI();
 // }
 
-// // Loops and Arrays in JS.
+// Loops and Arrays in JS.
 
 // {
 //   let numbers = [1, 2, 3, 5, 6, [10, 20, 30], 7, 8];
@@ -1166,89 +1203,89 @@
 //   // }*/
 // }
 
-// // // // Strings in JS.
+// // Strings in JS.
 
-// // {
-// //   let name = "abcde";
-// //   const reverseOfString = function (str) {
-// //     let rev = "";
+// {
+//   let name = "abcde";
+//   const reverseOfString = function (str) {
+//     let rev = "";
 
-// //     for (let i = str.length - 1; i >= 0; i--) {
-// //       rev = rev + str[i];
-// //     }
+//     for (let i = str.length - 1; i >= 0; i--) {
+//       rev = rev + str[i];
+//     }
 
-// //     return rev;
-// //   };
+//     return rev;
+//   };
 
-// //   function stringReverse(str) {
-// //     str = str.split("");
-// //     let temp;
+//   function stringReverse(str) {
+//     str = str.split("");
+//     let temp;
 
-// //     for (let i = 0; i < Math.floor(str.length / 2); i++) {
-// //       temp = str[str.length - i - 1];
-// //       str[str.length - i - 1] = str[i];
-// //       str[i] = temp;
-// //     }
+//     for (let i = 0; i < Math.floor(str.length / 2); i++) {
+//       temp = str[str.length - i - 1];
+//       str[str.length - i - 1] = str[i];
+//       str[i] = temp;
+//     }
 
-// //     return str.join("");
-// //   }
+//     return str.join("");
+//   }
 
-// //   console.log(reverseOfString(name));
-// //   console.log(stringReverse(name));
-// // }
+//   console.log(reverseOfString(name));
+//   console.log(stringReverse(name));
+// }
 
-// // // // Strings Methods in JS.
+// // Strings Methods in JS.
 
-// // {
-// //   let str = "javascript";
-// //   let fun = " is fun";
-// //   let javascript = "";
+// {
+//   let str = "javascript";
+//   let fun = " is fun";
+//   let javascript = "";
 
-// //   // ASCII value of a character
-// //   const code = str.charCodeAt(1);
-// //   console.log(code); // Outputs : 97
+//   // ASCII value of a character
+//   const code = str.charCodeAt(1);
+//   console.log(code); // Outputs : 97
 
-// //   // Concatinate two or more strings
-// //   javascript = str.concat(fun);
-// //   console.log(javascript); // Outputs : javascript is fun
+//   // Concatinate two or more strings
+//   javascript = str.concat(fun);
+//   console.log(javascript); // Outputs : javascript is fun
 
-// //   //Checking that a character or string is present in String to check
-// //   const isStrExist = javascript.includes("fun");
-// //   console.log(isStrExist); // Outputs :true
+//   //Checking that a character or string is present in String to check
+//   const isStrExist = javascript.includes("fun");
+//   console.log(isStrExist); // Outputs :true
 
-// //   // search for the index where character or string is present
-// //   const Index = javascript.search("is");
-// //   console.log(Index); // Outputs : 11
+//   // search for the index where character or string is present
+//   const Index = javascript.search("is");
+//   console.log(Index); // Outputs : 11
 
-// //   // Replace a String from a specific string
-// //   const replace = javascript.replace("is fun", "is amazing");
-// //   console.log(replace); // Outputs : javascript is amazing
+//   // Replace a String from a specific string
+//   const replace = javascript.replace("is fun", "is amazing");
+//   console.log(replace); // Outputs : javascript is amazing
 
-// //   // Return the specific part of the string
-// //   const part = javascript.slice(4, 10);
-// //   console.log(part); // Outputs : script
+//   // Return the specific part of the string
+//   const part = javascript.slice(4, 10);
+//   console.log(part); // Outputs : script
 
-// //   // Split the string into an array of characters
-// //   javascript = javascript.split("");
-// //   console.log(javascript);
+//   // Split the string into an array of characters
+//   javascript = javascript.split("");
+//   console.log(javascript);
 
-// //   // Join the array or characters into single string
-// //   javascript = javascript.join("");
-// //   console.log(javascript);
+//   // Join the array or characters into single string
+//   javascript = javascript.join("");
+//   console.log(javascript);
 
-// //   // Converts the string into Uppercase;
-// //   javascript = javascript.toUpperCase();
-// //   console.log(javascript); // Outputs : JAVASCRIPT IS FUN
+//   // Converts the string into Uppercase;
+//   javascript = javascript.toUpperCase();
+//   console.log(javascript); // Outputs : JAVASCRIPT IS FUN
 
-// //   // Converts the string into Lowecase
-// //   javascript = javascript.toLowerCase();
-// //   console.log(javascript); // Outputs : javascript is fun
-// // }
+//   // Converts the string into Lowecase
+//   javascript = javascript.toLowerCase();
+//   console.log(javascript); // Outputs : javascript is fun
+// }
 
-// // Difference between Arrow Functions and Simple functions in objects
+// Difference between Arrow Functions and Simple functions in objects
 
 // console.log(
-//   "Difference between Arrow Functions and Simple functions in objects"
+//   "Difference between Arrow Functions and Simple functions in objects",
 // );
 
 // {
@@ -1282,29 +1319,29 @@
 
 // {
 //   // Global scope
-//   function globalFunc() {
-//     console.log("I'm global!");
-//   }
-//   globalFunc(); // Works
+// function globalFunc() {
+//   console.log("I'm global!");
+// }
+// globalFunc(); // Works
 
-//   if (true) {
-//     function blockScopedFunc() {
-//       console.log("I'm block-scoped (in modern JS strict mode)!");
-//     }
-//     blockScopedFunc(); // Works here
+// if (true) {
+//   function blockScopedFunc() {
+//     console.log("I'm block-scoped (in modern JS strict mode)!");
 //   }
-//   blockScopedFunc(); // ReferenceError: blockScopedFunc is not defined (outside the block in modern strict mode)
+//   blockScopedFunc(); // Works here
+// }
+// blockScopedFunc(); // ReferenceError: blockScopedFunc is not defined (outside the block in modern strict mode)
 
-//   function outerFunc() {
-//     function innerFunc() {
-//       console.log("I'm function-scoped to outerFunc!");
-//     }
-//     innerFunc(); // Works here
+// function outerFunc() {
+//   function innerFunc() {
+//     console.log("I'm function-scoped to outerFunc!");
 //   }
-//   //innerFunc(); // ReferenceError: innerFunc is not defined (outside outerFunc)
+//   innerFunc(); // Works here
+// }
+// innerFunc(); // ReferenceError: innerFunc is not defined (outside outerFunc)
 // }
 
-// //morning(); // ReferenceError: Cannot access 'morning' before initialization
+// morning(); // ReferenceError: Cannot access 'morning' before initialization
 
 // const morning = function () {
 //   console.log("Good Morning");
@@ -1313,8 +1350,8 @@
 // morning();
 // blockScopedFunc();
 
-// console.log(v2);
-// //evening(); // Uncaught TypeError: evening is not a function
+// console.log(v2);/
+// evening(); // Uncaught TypeError: evening is not a function
 // var v1 = 10; // Global scope
 // if (true) {
 //   function evening() {
@@ -1335,7 +1372,7 @@
 
 // ob.callingBlockScopedFunc();
 
-// // Object and Array Cloning
+// Object and Array Cloning
 
 // const education = {
 //   university: "comsats",
@@ -1352,24 +1389,28 @@
 // const per = Object.assign({}, physicalDetails, education);
 
 // const per2 = { ...per };
-
-// console.log(per.courses);
 // console.log(per2.courses);
+// per.courses[0] = "AI";
+// console.log(per2.courses);
+// console.log(education.courses);
 
 // per.courses.push("DB");
-// per.cgpa = 3;
-// console.log(per.courses);
-// console.log(per2.courses, per2);
+// console.log(education.courses);
+// console.log(per2.courses);
 
-// const arr = [5, 7, [99, 88, 77], 10, 20];
+// per.sem = 8;
+// console.log(per.sem, education.sem, per2.sem);
 
-// const copyArr = [...arr];
+// const arr_ = [5, 7, [99, 88, 77], 10, 20];
 
-// console.log(copyArr[2]);
+// const copyArr_ = [...arr_];
+// console.log(arr_);
 
-// arr[2].push(66);
+// console.log(copyArr_[2]);
 
-// console.log(copyArr[2]);
+// arr_[2].push(66);
+
+// console.log(copyArr_[2]);
 
 // // Error Handling in JS
 
@@ -1382,7 +1423,7 @@
 // console.log("Below Catch");
 
 // try {
-//   var age = 15;
+//   var age = 20;
 
 //   if (age < 18) {
 //     throw new Error("Age must be greator than 18");
@@ -1494,21 +1535,24 @@
 //   .catch((error) => console.error("Caught specific error:", error.message))
 //   .finally(() => console.log("Error path complete."));
 
+// console.log("Start");
+// console.log("hi");
+
 // let promise1 = new Promise((resolve, reject) => {
-//   setTimeout(reject, 1000, "First");
+//   setTimeout(resolve, 1000, "First");
 // });
 // let promise2 = new Promise((resolve, reject) => {
-//   setTimeout(reject, 2000, "Second");
+//   setTimeout(resolve, 2000, "Second");
 // });
 // let promise3 = new Promise((resolve, reject) => {
-//   setTimeout(reject, 4000, "Third");
+//   setTimeout(resolve, 10000, "Third");
 // });
 
 // Promise.all([promise1, promise2, promise3])
 //   .then((values) => {
 //     console.log("All Resolved : " + values);
 //   })
-//   .catch((error) => {
+//   .catch((error) => {s
 //     console.error("error:" + error);
 //   });
 
@@ -1518,37 +1562,35 @@
 //   }, 3000);
 // }
 
-// let output = getData();
+// getData();
 
-// console.log(output);
+async function myAsynFunc() {
+  return Math.random() > 0.5
+    ? new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Hello World");
+        }, 2000);
+      })
+    : Promise.reject(new Error("False Condition"));
+}
 
-// async function myAsynFunc() {
-//   return Math.random() > 0.5
-//     ? new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//           resolve("Hello World");
-//         }, 2000);
-//       })
-//     : Promise.reject(new Error("False Condition"));
-// }
+async function asynFunc() {
+  console.log("Start");
 
-// async function asynFunc() {
-//   console.log("Start");
+  await myAsynFunc()
+    .then((message) => {
+      console.log(message);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
 
-//   await myAsynFunc()
-//     .then((message) => {
-//       console.log(message);
-//     })
-//     .catch((error) => {
-//       console.log(error.message);
-//     });
+  console.log("end");
+}
 
-//   console.log("end");
-// }
+asynFunc();
 
-// asynFunc();
-
-// console.log("Prints after Start");
+console.log("Prints after Start");
 
 // function getPromis() {
 //   return new Promise((resolve, reject) => {
@@ -1714,20 +1756,20 @@ async function fetchApiGetRequest() {
 
 // fetchApiPutRequest();
 
-async function fetchApiDeleteRequest() {
-  try {
-    let res = await fetch("https://jsonplaceholder.typicode.com/users/1", {
-      method: "DELETE",
-    });
+// async function fetchApiDeleteRequest() {
+//   try {
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users/1", {
+//       method: "DELETE",
+//     });
 
-    if (!res.ok) {
-      throw new Error("Failed to Delete User " + res.status);
-    }
-    console.log("User Deleted");
-    console.log(await res.json());
-  } catch (error) {
-    console.log(error);
-  }
-}
+//     if (!res.ok) {
+//       throw new Error("Failed to Delete User " + res.status);
+//     }
+//     console.log("User Deleted");
+//     console.log(await res.json());
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-fetchApiDeleteRequest();
+// fetchApiDeleteRequest();
