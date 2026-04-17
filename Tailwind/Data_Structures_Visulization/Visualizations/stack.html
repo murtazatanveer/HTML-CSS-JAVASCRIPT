@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main
+      class="h-screen w-screen flex flex-row items-center justify-evenly border-4 border-black"
+    >
+      <section
+        id="stack"
+        class="flex flex-col items-center justify-end h-[70%] w-[20%] border-[3px] border-yellow-800"
+      ></section>
+      <aside
+        id="stackController"
+        class="h-[15%] w-[30%] border-[3px] border-green-800"
+      >
+        <div class="border-2 border-violet-700">
+          <input
+            type="text"
+            placeholder="Number"
+            id="text"
+            class="h-full w-full"
+          />
+        </div>
+        <div class="border-2 border-yellow-900">
+          <button id="push" class="h-full w-full">Push</button>
+        </div>
+        <div class="border-2 border-yellow-900">
+          <button id="pop" class="h-full w-full">Pop</button>
+        </div>
+      </aside>
+    </main>
+    <script src="stack.js"></script>
+  </body>
+</html>

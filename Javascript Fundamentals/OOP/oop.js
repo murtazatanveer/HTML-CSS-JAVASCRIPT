@@ -29,7 +29,6 @@ console.log(u1.constructor);
 // Classes in JS.
 
 class student {
-  name;
   #age;
   #regno;
   #cgpa;
@@ -45,7 +44,7 @@ class student {
 
   displayDetails() {
     console.log(
-      this.name + "\n" + this.#age + "\n" + this.#regno + "\n" + this.#cgpa
+      this.name + "\n" + this.#age + "\n" + this.#regno + "\n" + this.#cgpa,
     );
   }
 
@@ -69,13 +68,14 @@ let s2 = {
   s: new student("ali", 22, "100", 3, false),
 };
 
-console.log(s2.s);
+console.log(s2["s"]);
 
 let arr = [s1, s2];
 
 console.log(arr);
 
 console.log(typeof student);
+console.log(typeof s1);
 
 // Inheritence in JS.
 
@@ -135,7 +135,7 @@ class ElectricCar extends Car {
   }
   charge() {
     console.log(
-      `${this.brand} ${this.model} is charging. Battery: ${this.batteryLife} hours.`
+      `${this.brand} ${this.model} is charging. Battery: ${this.batteryLife} hours.`,
     );
   }
   // Overriding the start method from Vehicle

@@ -1562,35 +1562,59 @@
 //   }, 3000);
 // }
 
-// getData();
+// let data_ = getData();
 
-async function myAsynFunc() {
-  return Math.random() > 0.5
-    ? new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve("Hello World");
-        }, 2000);
-      })
-    : Promise.reject(new Error("False Condition"));
-}
+// console.log(data_);
 
-async function asynFunc() {
-  console.log("Start");
+// async function myAsynFunc() {
+//   return Math.random() > 0.5
+//     ? new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//           resolve("Hello World");
+//         }, 2000);
+//       })
+//     : Promise.reject(new Error("False Condition"));
+// }
 
-  await myAsynFunc()
-    .then((message) => {
-      console.log(message);
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
+// async function asynFunc() {
+//   console.log("Start");
 
-  console.log("end");
-}
+//   await myAsynFunc()
+//     .then((message) => {
+//       console.log(message);
+//     })
+//     .catch((error) => {
+//       console.log(error.message);
+//     });
 
-asynFunc();
+//   console.log("end");
+// }
 
-console.log("Prints after Start");
+// asynFunc();
+
+// function delay() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Done!");
+//     }, 2000);
+//   });
+// }
+
+// delay().then((result) => {
+//   console.log(result);
+// });
+
+// console.log("After");
+
+// async function run() {
+//   const result = await delay();
+//   console.log(result);
+// }
+// run();
+
+// console.log("After");
+
+// console.log("---Start---");
 
 // function getPromis() {
 //   return new Promise((resolve, reject) => {
@@ -1611,7 +1635,7 @@ console.log("Prints after Start");
 //     .then((result) => {
 //       setTimeout(() => {
 //         console.log(result);
-//       }, 3000);
+//       }, 2000);
 //       return "Data is Updated";
 //     })
 //     .then((data) => {
@@ -1664,35 +1688,35 @@ console.log("Prints after Start");
 
 // Fetch API in JS.
 
-async function fetchApiGetRequest() {
-  // try {
-  //   let res = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function fetchApiGetRequest() {
+//   try {
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-  //   if (!res.ok) {
-  //     throw new Error(`Error Accured due to ${response.status}`);
-  //   }
+// if (!res.ok) {
+//       throw new Error(`Error Accured due to ${response.status}`);
+//     }
 
-  //   let data = await res.json();
-  //   console.log(data);
-  //   console.log("Fetch API executed without any Error");
-  // } catch (error) {
-  //   console.log("There was a problem with the fetch operation : ", error);
-  // }
+//   let data = await res.json();
+//   console.log(data);
+//   console.log("Fetch API executed without any Error");
+// } catch (error) {
+//   console.log("There was a problem with the fetch operation : ", error);
+// }
 
-  // The above code is same as
+// The above code is same as
 
-  await fetch("https://jsonplaceholder.typicode.com/users", {
-    method: "GET",
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      console.log("Fetch API executed without any Error");
-    })
-    .catch((error) => {
-      console.log("There was a problem with the fetch operation : ", error);
-    });
-}
+//   await fetch("https://jsonplaceholder.typicode.com/users", {
+//     method: "GET",
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       console.log("Fetch API executed without any Error");
+//     })
+//     .catch((error) => {
+//       console.log("There was a problem with the fetch operation : ", error);
+//     });
+// }
 
 // fetchApiGetRequest();
 
@@ -1758,7 +1782,7 @@ async function fetchApiGetRequest() {
 
 // async function fetchApiDeleteRequest() {
 //   try {
-//     let res = await fetch("https://jsonplaceholder.typicode.com/users/1", {
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users/3", {
 //       method: "DELETE",
 //     });
 
@@ -1770,6 +1794,102 @@ async function fetchApiGetRequest() {
 //   } catch (error) {
 //     console.log(error);
 //   }
+//   fetchApiGetRequest();
 // }
 
 // fetchApiDeleteRequest();
+// const arr = [1, 2, 3];
+
+// arr.forEach((value, index) => {
+//   console.log(value, index);
+// });
+
+// const ob = {
+//   name: "murtaza",
+// };
+
+// These three array methods are the backbone of modern JavaScript (and React). If you understand them properly, most data-handling problems become much easier.
+// 1) map() → transform data
+
+// let arr = [2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 18];
+
+// let arrSquares = arr.map((num) => num * num);
+// console.log(arrSquares);
+
+// // 2) filter() → select data
+
+// let evenNums = arr.filter((num) => num % 2 == 0);
+// console.log(evenNums);
+
+// // 3) reduce() → compress into one value
+
+// const sum = arr.reduce((runningSum, newNum) => runningSum + newNum, 0);
+// console.log(sum);
+
+// Destructuring in Javascript
+//Destructuring is a syntax that lets you extract values from arrays or objects into variables in a clean way.
+// Instead of accessing values one by one, you “unpack” them directly.
+
+// 1) Object Destructuring
+
+// const user = {
+//   name: "murtaza",
+//   age: 23,
+// };
+
+// let { name, age } = user;
+
+// console.log(name, age);
+
+// const { name: n, age: a } = user;
+
+// console.log(n, a);
+
+// // Nested destructuring
+
+// const student = {
+//   name: "Ali",
+//   marks: {
+//     math: 90,
+//   },
+// };
+
+// let {
+//   marks: { math },
+// } = student;
+// console.log(math);
+
+// 2) Array Destructuring
+
+// const arr = [10, 20, 30, 40];
+
+// let [n1, n2, n3] = arr;
+
+// console.log(n1, n2, n3);
+
+// let [, num2, , num4] = arr;
+// console.log(num2, num4);
+
+// 3) Destructuring in function parameters
+
+// function showUser({ name, age }) {
+//   console.log(name, age);
+// }
+
+// showUser({ name: "Ali", age: 22 });
+
+//spread/rest (...)
+const evenNums = [2, 4, 6, 8, 10];
+const oddNums = [1, 3, 5, 7, 9];
+
+const nums = [...evenNums, ...oddNums];
+console.log(nums);
+
+const user = { name: "murtaza", age: 23 };
+
+const student = { ...user, uni: "Comsats" };
+
+console.log(student);
+
+// ... does not create a deep copy , it only performs a shallow copy,
+// meaning nested references are still shared.

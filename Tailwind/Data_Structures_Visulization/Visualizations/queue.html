@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main
+      class="h-screen w-screen flex flex-col items-center justify-evenly border-4 border-amber-950"
+    >
+      <section
+        id="queue"
+        class="w-[60%] flex flex-row items-center justify-start basis-[8%] border-4 border-green-800"
+      >
+        <div
+          class="border-[2px] border-amber-600 text-center h-full w-[13%] flex items-center justify-center"
+        >
+          <p>10</p>
+        </div>
+      </section>
+
+      <aside
+        id="queueController"
+        class="basis-auto w-[40%] border-2 border-red-600"
+      >
+        <div class="border-2 border-violet-700">
+          <input
+            type="text"
+            placeholder="Number"
+            id="text"
+            class="h-full w-full"
+          />
+        </div>
+        <div class="border-2 border-yellow-900">
+          <button id="enqueue" class="h-full w-full">Enqueue</button>
+        </div>
+        <div class="border-2 border-yellow-900">
+          <button id="dequeue" class="h-full w-full">Dequeue</button>
+        </div>
+      </aside>
+    </main>
+    <script src="queue.js"></script>
+  </body>
+</html>

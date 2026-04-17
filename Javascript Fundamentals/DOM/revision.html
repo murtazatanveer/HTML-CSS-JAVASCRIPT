@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex Box</title>
+    <title>DOM</title>
     <style>
       :root {
         --Top: 4.8cm;
@@ -18,23 +18,23 @@
         justify-content: space-evenly;
       }
 
-      #lowerBox {
+      .box2 {
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
-        color: white;
-        height: 30%;
-        width: 90%;
-        border: 5px solid rgb(255, 72, 0);
-        background-color: aquamarine;
+        justify-content: space-between;
+        height: 90%;
+        width: 40%;
+        border: 5px solid rgb(84, 205, 28);
       }
 
-      footer div {
-        /* flex-grow: 1; */
-        color: white;
-        /* width: 1.3cm; */
-        /* height: 30%; */
-        flex-basis: 8%;
-        height: 30%;
+      .bg-black {
+        background-color: rgb(65, 63, 63);
+      }
+
+      .bg-beige {
+        background-color: beige;
       }
 
       .box1 {
@@ -124,36 +124,10 @@
       #first {
         animation: animation_2 1s linear infinite alternate;
       } */
-
-      @media (max-width: 370px) {
-        .box {
-          flex-direction: column;
-          height: 100%;
-          width: 40%;
-        }
-      }
-
-      @keyframes animation_1 {
-        from {
-          margin-top: 0;
-        }
-        to {
-          margin-top: var(--Top);
-        }
-      }
-
-      @keyframes animation_2 {
-        from {
-          margin-top: var(--Top);
-        }
-        to {
-          margin-top: 0;
-        }
-      }
     </style>
   </head>
   <body>
-    <section class="box">
+    <section class="box" id="box">
       <div id="b1"><p>Box 1</p></div>
       <div id="b2"><p>Box 2</p></div>
       <div id="b3"><p>Box 3</p></div>
@@ -162,7 +136,6 @@
       <div id="b6"><p>Box 6</p></div>
     </section>
 
-    <footer id="lowerBox"></footer>
-    <script src="dom.js"></script>
+    <script src="revision.js"></script>
   </body>
 </html>

@@ -6,31 +6,32 @@ console.log(b1);
 const allInnerBoxes = document.getElementsByTagName("div"); // Returns an array of all div tags. If only one div tag return only that div tag
 console.log(allInnerBoxes);
 
-// allBoxes[2].innerHTML = "HIII";
+allInnerBoxes[2].innerHTML = "HIII";
 
 const box = document.getElementsByClassName("box"); // section tag
 console.log(box[0]);
 
-const alLText = document.querySelectorAll("p"); // Returns an array
+const alLText = document.querySelectorAll("p"); // Returns an static array
 console.log(alLText);
 
 // Updating HTML ElementsUpdating HTML elements (textcontent, innerText, innerHTML , outerHTML)
-// b1.innerHTML = '<Button id="b">CLICK ME</Button>'; // Overrides <p></p> in b1
-// console.log(b1.innerHTML);
+b1.innerHTML = '<Button id="b">CLICK ME</Button>'; // Overrides <p></p> in b1
+console.log(b1.innerHTML);
 
-// b1.innerHTML = '<Button id="but">CLICK</Button>'; // Overrides existing Button with id "b"
-// console.log(b1.innerHTML);
+b1.innerHTML = '<Button id="but">CLICK</Button>'; // Overrides existing Button with id "b"
+console.log(b1.innerHTML);
 
 // b1.outerHTML = '<h1 id="dom">DOM</h1>'; //This is the key point: const b1 still holds a reference to the original div element that was removed from the DOM.
-// console.log(b1.innerHTML);
+// console.log(b1.outerHTML);
+// console.log(b1);
 
 // const newElement = document.getElementById("dom");
 
-// console.log(b1.outerHTML + "\t" + newElement.outerHTML);
+// console.log(b1.outerHTML + "\t");
 
-// console.log(box[0].innerText);
-
-// console.log(box[0].textContent);
+console.log(box[0].innerText);
+console.log(box[0].style);
+console.log(box[0].textContent);
 
 // Creating new HTML Elements
 
@@ -46,17 +47,17 @@ lastDiv.style.background = "#2b2222";
 
 box[0].appendChild(lastDiv);
 
-const firstDiv = document.createElement("div");
+// const firstDiv = document.createElement("div");
 
-firstDiv.innerHTML = "<p>First Box</p>";
-firstDiv.id = "first";
-firstDiv.style.background = "orange";
+// firstDiv.innerHTML = "<p>First Box----</p>";
+// firstDiv.id = "first";
+// firstDiv.style.background = "orange";
 
-box[0].insertAdjacentElement("afterbegin", firstDiv);
+// box[0].insertAdjacentElement("afterbegin", firstDiv);
 
 // box[0].insertAdjacentHTML(
 //   "afterbegin",
-//   '<div id="first"><p>First Box</p></div>'
+//   '<div id="first" style="background-color: green;"><p>First Box</p></div>',
 // );
 
 const middleBox = document.createElement("div");
@@ -69,90 +70,104 @@ middleBox.style.fontWeight = "bolder";
 
 box[0].insertBefore(middleBox, allInnerBoxes[4]);
 
+//-------------------------------------------------
+
 const lb = document.getElementById("lowerBox");
 
-const div1 = b1.cloneNode(true);
+const div5 = document.getElementById("b5").cloneNode(true);
 
-lb.prepend(div1);
+lb.prepend(div5);
 
-const div6 = allInnerBoxes[7].cloneNode(true);
-div1.after(allInnerBoxes[2].cloneNode(true), div6);
+const div6 = allInnerBoxes[6].cloneNode(true);
+div5.after(div6);
 
-div6.before(allInnerBoxes[6].cloneNode(true), allInnerBoxes[5].cloneNode(true));
+div5.before(allInnerBoxes[3].cloneNode(true), allInnerBoxes[4].cloneNode(true));
 
-// const copyInnerBoxes = Array.from(box[0].children);
+//-----------------------------
+
+console.log(Array.from(box[0].children).length);
+
+const copyInnerBoxes = Array.from(box[0].children);
 
 const box1Parent = b1.parentElement;
 
-console.log(box1Parent);
+// console.log(box1Parent);
 
-//box1Parent.style.display = "none";
+// box1Parent.style.display = "none";
 
-//console.log((box1Parent.style.cssText = "display:none"));
+// console.log((box1Parent.style.cssText = "display:none"));
 
-// lb.style.flexDirection = "column";
-// lb.style.width = "50%";
-// lb.style.height = "70%";
+lb.style.flexDirection = "column";
+lb.style.width = "50%";
+lb.style.height = "70%";
 
-// lb.style.cssText =
-//   "background:transparent; flex-direction:column; width:30%; height:70%;";
+lb.style.cssText =
+  "background:transparent; flex-direction:column; width:30%; height:70%;";
 
 // box[0].remove();
 
-// let lbChilds = lb.querySelectorAll("*");
+let lbChilds = lb.querySelectorAll("*");
+console.log(lbChilds[0]);
 
-// lbChilds[0].style.display = "none";
+lbChilds[0].style.display = "none";
 
-// lbChilds=lb.children;
+lbChilds = lb.children;
 
-// console.log(lbChilds);
+console.log(lbChilds);
 
-// lbChilds[0].innerHTML = "<h4>HELLO G</h4>";
+lbChilds[0].innerHTML = "<h4>HELLO G</h4>";
+
+lbChilds[0].style.display = "block";
 
 // b1.setAttribute("style", "display:none");
 
 // b1.setAttribute("class", "box1");
 // b1.setAttribute("id", "ub1");
 
-// const p = b1.getElementsByTagName("p");
+// -----------------------------
 
-// p[0].innerHTML = "<h1>HELLO</h1>";
+// const p = document.querySelectorAll("p");
 
+// console.log(p);
+
+// p[2].innerHTML = "<h1>HELLO</h1>";
+
+// console.log(box[0]);
 // box[0].className = "box1";
 
-// box[0].className = "box1 box";
+// box[0].classList.add("box9");
 
-// box[0].classList.add("box1");
+// // box[0].id = "box1";
 
-// box[0].id = "box1";
+// // box[0].classList.add("box2");
 
-// box[0].classList.add("box2");
+// // box[0].classList.remove("box2");
 
-// box[0].classList.remove("box2");
+// // console.log(box[0].classList.toggle("box3"));
+// // console.log(box[0].classList.toggle("box4"));
+// // console.log(box[0].classList.toggle("box5"));
 
-// console.log(box[0].classList.toggle("box3"));
-// console.log(box[0].classList.toggle("box4"));
-// console.log(box[0].classList.toggle("box5"));
+// // console.log(box[0].classList.toggle("box5"));
 
-// console.log(box[0].classList.toggle("box5"));
+// // console.log(box[0].classList.contains("box"));
 
-// console.log(box[0].classList.contains("box"));
+// // let x = box[0].classList;
+// // console.log(x.length);
 
-// let x = box[0].classList;
-// console.log(x.length);
+// // let boxStyle = getComputedStyle(box[0]);
 
-// let boxStyle = getComputedStyle(box[0]);
+// // for (let i = 0; i < boxStyle.length; i++) {
+// //   lb.style.setProperty(boxStyle[i], boxStyle.getPropertyValue(boxStyle[i]));
+// // }
 
-// for (let i = 0; i < boxStyle.length; i++) {
-//   lb.style.setProperty(boxStyle[i], boxStyle.getPropertyValue(boxStyle[i]));
+// //console.log(firstDiv.style.getPropertyValue("background"));
+
+// lb.classList.add("box", "box1");
+
+// box[0].addEventListener("click", displayBoxes);
+
+// function displayBoxes(e) {
+//   alert("Clicked On " + e.target.textContent);
 // }
 
-//console.log(firstDiv.style.getPropertyValue("background"));
-
-lb.classList.add("box", "box1");
-
-box[0].addEventListener("click", displayBoxes);
-
-function displayBoxes(e) {
-  alert("Clicked On " + e.target.textContent);
-}
+//-------------
